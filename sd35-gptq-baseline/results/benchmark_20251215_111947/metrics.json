@@ -1,0 +1,19 @@
+{
+  "model_name": "SD 3.5 Medium",
+  "quantization_config": "FP16 (Baseline)",
+  "timestamp": "2025-12-15T11:19:56.145462",
+  "fid_score": null,
+  "clip_score_mean": null,
+  "clip_score_std": null,
+  "model_size_gb": null,
+  "transformer_size_gb": 4.178232550621033,
+  "peak_vram_gb": 19.465402603149414,
+  "vram_allocated_gb": null,
+  "inference_time_mean": 7.701462520004133,
+  "inference_time_std": 0.18421131255551407,
+  "images_per_second": 0.1298454673255312,
+  "num_images": 10,
+  "num_inference_steps": 28,
+  "guidance_scale": 4.5,
+  "resolution": "1024x1024"
+}

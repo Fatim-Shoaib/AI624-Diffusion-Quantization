@@ -1,0 +1,40 @@
+# =============================================================================
+# Qronos for SD 3.5 Medium - Requirements
+# =============================================================================
+
+# Core ML
+torch>=2.1.0
+torchvision>=0.16.0
+
+# Diffusers
+diffusers>=0.25.0
+transformers>=4.36.0
+accelerate>=0.25.0
+
+# Quantization utilities
+unfoldNd>=0.2.0  # For convolution unfolding (from Brevitas)
+
+# Evaluation
+scipy>=1.11.0
+numpy>=1.24.0
+Pillow>=10.0.0
+
+# CLIP Score
+open-clip-torch>=2.23.0
+
+# FID Score  
+pytorch-fid>=0.3.0
+clean-fid>=0.1.35
+
+# Progress bars and logging
+tqdm>=4.66.0
+colorama>=0.4.6
+
+# Configuration
+PyYAML>=6.0
+
+# Hugging Face
+huggingface-hub>=0.19.0
+
+# Optional: For faster linear algebra
+# intel-mkl  # If using Intel CPU

@@ -1,0 +1,112 @@
+# =============================================================================
+# 50 Visual Inspection Prompts for SD 3.5 Medium Quantization Evaluation
+# =============================================================================
+# These prompts cover diverse categories to thoroughly test image generation
+# quality after quantization. Lines starting with # are ignored.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Photorealistic - People and Portraits (3)
+# -----------------------------------------------------------------------------
+A professional portrait photograph of a woman with curly auburn hair, soft studio lighting, sharp focus
+An elderly man with weathered hands playing chess in a sunlit park, documentary photography style
+A young child playing in autumn leaves, golden hour photography, candid moment
+
+# -----------------------------------------------------------------------------
+# Photorealistic - Nature (5)
+# -----------------------------------------------------------------------------
+A majestic snow-capped mountain reflected in a crystal clear alpine lake at golden hour
+Close-up macro photography of morning dew drops on a spider web, bokeh background
+A dense forest with sunbeams filtering through the canopy, mystical atmosphere
+A dramatic thunderstorm over vast wheat fields, moody atmosphere, landscape photography
+Cherry blossoms falling along a Japanese river path in spring, serene landscape
+
+# -----------------------------------------------------------------------------
+# Photorealistic - Animals (4)
+# -----------------------------------------------------------------------------
+A red fox in a snowy forest, wildlife photography, National Geographic style
+An owl perched on a branch at twilight, detailed feathers, piercing yellow eyes
+A golden retriever running on a sandy beach at sunset, action photography
+A colorful parrot perched on a tropical branch, macro photography, vibrant colors
+
+# -----------------------------------------------------------------------------
+# Photorealistic - Urban (4)
+# -----------------------------------------------------------------------------
+A bustling Tokyo street at night with neon signs and light trails, cyberpunk atmosphere
+A cozy coffee shop interior with warm lighting, wooden furniture, and steaming cups
+Modern glass skyscraper reflecting sunset clouds, architectural photography
+A busy street market in Marrakech, vibrant colors, documentary style
+
+# -----------------------------------------------------------------------------
+# Artistic - Oil Paintings (4)
+# -----------------------------------------------------------------------------
+An oil painting of a stormy seascape in the style of J.M.W. Turner, dramatic waves
+A Renaissance-style portrait of a noble woman, sfumato technique, dark background
+Impressionist painting of a garden party, dappled sunlight, Monet-inspired
+Van Gogh style starry night over a modern city skyline, swirling brushstrokes
+
+# -----------------------------------------------------------------------------
+# Artistic - Watercolor (3)
+# -----------------------------------------------------------------------------
+A delicate watercolor painting of spring flowers, soft edges, botanical illustration
+Watercolor landscape of rolling Tuscan hills at sunset, loose brushwork
+Japanese ink wash painting of misty mountains, minimalist, zen aesthetic
+
+# -----------------------------------------------------------------------------
+# Artistic - Digital Art (4)
+# -----------------------------------------------------------------------------
+A cyberpunk cityscape with flying cars and holographic billboards, neon glow
+Fantasy concept art of a floating castle in the clouds, epic scale
+Steampunk mechanical dragon, intricate gears and brass details, digital painting
+Surrealist digital art of melting clocks in a desert, Dali-inspired
+
+# -----------------------------------------------------------------------------
+# Artistic - Illustration (3)
+# -----------------------------------------------------------------------------
+A children's book illustration of a friendly dragon and a princess, whimsical style
+Art nouveau poster of a beautiful woman with flowing hair and flowers
+Comic book style superhero landing pose, dynamic action lines, bold colors
+
+# -----------------------------------------------------------------------------
+# Food Photography (4)
+# -----------------------------------------------------------------------------
+A gourmet burger with melting cheese and fresh vegetables, professional food photography
+An elegant sushi platter on a black slate board, Japanese cuisine photography
+Steaming bowl of ramen with perfectly cooked egg, chopsticks lifting noodles
+A colorful smoothie bowl with fresh berries and granola, overhead shot
+
+# -----------------------------------------------------------------------------
+# Architecture (4)
+# -----------------------------------------------------------------------------
+Gothic cathedral interior with sunbeams through stained glass windows
+Modern minimalist house with floor-to-ceiling windows overlooking the ocean
+Ancient ruins of a Greek temple at sunset, golden light on marble columns
+Futuristic eco-friendly building covered in vertical gardens, sustainable architecture
+
+# -----------------------------------------------------------------------------
+# Cinematic (3)
+# -----------------------------------------------------------------------------
+A noir detective in a smoky office, venetian blind shadows, 1940s aesthetic
+An epic battle scene with armies clashing, cinematic wide shot, Lord of the Rings style
+A astronaut standing alone on Mars, vast red desert, cinematic composition
+
+# -----------------------------------------------------------------------------
+# Cute/Whimsical (3)
+# -----------------------------------------------------------------------------
+A tiny mouse reading a tiny book under a mushroom, fairytale illustration style
+A fluffy corgi puppy wearing a tiny crown, sitting on a velvet cushion
+A magical treehouse in an enchanted forest, fairy lights, cozy atmosphere
+
+# -----------------------------------------------------------------------------
+# Abstract/Conceptual (3)
+# -----------------------------------------------------------------------------
+Abstract art with vibrant colors and geometric shapes, Kandinsky inspired
+A surreal scene of a door opening to the cosmos, floating islands
+Minimalist composition of a single red rose on white background, high contrast
+
+# -----------------------------------------------------------------------------
+# Seasonal (3)
+# -----------------------------------------------------------------------------
+A pumpkin patch with scarecrows under autumn sky, warm fall colors
+A Christmas market with snow and twinkling lights, festive atmosphere
+A summer beach scene with colorful umbrellas and crystal clear water

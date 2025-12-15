@@ -1,0 +1,26 @@
+============================================================
+Benchmark Results: SD 3.5 Medium (FP16 (Baseline))
+============================================================
+Timestamp: 2025-12-15T11:19:56.145462
+
+Quality Metrics:
+  FID Score:        N/A
+  CLIP Score:       N/A
+
+Size Metrics:
+  Model Size:       N/A
+  Transformer Size: 4.18 GB
+
+Memory Metrics:
+  Peak VRAM:        19.47 GB
+
+Speed Metrics:
+  Inference Time:   7.70s ± 0.18s
+  Throughput:       0.130 img/s
+
+Generation Config:
+  Images Generated: 10
+  Inference Steps:  28
+  Guidance Scale:   4.5
+  Resolution:       1024x1024
+============================================================
