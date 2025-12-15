@@ -28,7 +28,7 @@ import logging
 import sys
 import time
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple
 import gc
 
 import torch
@@ -66,19 +66,17 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def load_calibration_data(
+def load_hessians(
     calibration_dir: Path,
-    max_samples: int = 256,
-) -> Dict[str, torch.Tensor]:
+) -> Tuple[Dict[str, torch.Tensor], Dict[str, int]]:
     """
-    Load calibration data from disk.
+    Load pre-computed Hessian matrices from disk.
     
     Args:
-        calibration_dir: Directory containing calibration data
-        max_samples: Maximum samples to load per layer
+        calibration_dir: Directory containing calibration data (Hessians)
         
     Returns:
-        Dictionary mapping layer names to activation tensors
+        Tuple of (hessians dict, nsamples dict)
     """
     calibration_dir = Path(calibration_dir)
     
@@ -90,26 +88,24 @@ def load_calibration_data(
     with open(metadata_path) as f:
         metadata = json.load(f)
     
-    calibration_data = {}
+    hessians = {}
+    nsamples = {}
     
-    for name, info in tqdm(metadata["layers"].items(), desc="Loading calibration data"):
+    for name, info in tqdm(metadata["layers"].items(), desc="Loading Hessians"):
         tensor_path = calibration_dir / info["file"]
-        tensor = torch.load(tensor_path, map_location="cpu")
-        
-        # Limit samples if needed
-        if tensor.shape[0] > max_samples:
-            tensor = tensor[:max_samples]
-        
-        calibration_data[name] = tensor
+        H = torch.load(tensor_path, map_location="cpu")
+        hessians[name] = H
+        nsamples[name] = info.get("nsamples", 1)
     
-    logger.info(f"Loaded calibration data for {len(calibration_data)} layers")
+    logger.info(f"Loaded Hessians for {len(hessians)} layers")
+    logger.info(f"Calibration config: {metadata.get('config', {})}")
     
-    return calibration_data
+    return hessians, nsamples
 
 
 def quantize_transformer_gptq(
     transformer: nn.Module,
-    calibration_data: Dict[str, torch.Tensor],
+    hessians: Dict[str, torch.Tensor],
     wbits: int = 4,
     group_size: int = 128,
     percdamp: float = 0.01,
@@ -117,11 +113,11 @@ def quantize_transformer_gptq(
     device: str = "cuda",
 ) -> nn.Module:
     """
-    Apply GPTQ quantization to transformer.
+    Apply GPTQ quantization to transformer using pre-computed Hessians.
     
     Args:
         transformer: SD3 transformer model
-        calibration_data: Dictionary of calibration activations
+        hessians: Dictionary of pre-computed Hessian matrices (H = X^T X / n)
         wbits: Weight bits (e.g., 4)
         group_size: Quantization group size
         percdamp: Dampening percentage for Hessian
@@ -147,61 +143,129 @@ def quantize_transformer_gptq(
     # Quantize each layer
     quantized_count = 0
     skipped_count = 0
+    total_loss = 0.0
     
     for name in tqdm(layer_names, desc="Quantizing layers"):
         layer = linear_layers[name]
         
-        # Check if we have calibration data for this layer
-        if name not in calibration_data:
-            logger.warning(f"No calibration data for {name}, skipping")
+        # Check if we have Hessian for this layer
+        if name not in hessians:
+            logger.warning(f"No Hessian for {name}, skipping")
             skipped_count += 1
             continue
         
-        calib = calibration_data[name].to(device)
+        H = hessians[name].to(device).float()
         
         # Move layer to device
         layer = layer.to(device)
+        W = layer.weight.data.clone().float()
         
-        # Initialize GPTQ
-        gptq = GPTQ(layer)
+        # Get dimensions
+        rows, columns = W.shape  # [out_features, in_features]
         
-        # Configure quantizer
-        gptq.quantizer = Quantizer_GPTQ()
-        gptq.quantizer.configure(
+        # Verify Hessian dimensions match
+        if H.shape[0] != columns or H.shape[1] != columns:
+            logger.warning(f"Hessian shape mismatch for {name}: H={H.shape}, W={W.shape}")
+            skipped_count += 1
+            continue
+        
+        # Handle dead columns (zero diagonal in Hessian)
+        dead = torch.diag(H) == 0
+        H[dead, dead] = 1
+        W[:, dead] = 0
+        
+        # Dampening for numerical stability
+        damp = percdamp * torch.mean(torch.diag(H))
+        diag = torch.arange(columns, device=device)
+        H[diag, diag] += damp
+        
+        # Cholesky decomposition for inverse: H = L L^T, H^{-1} = L^{-T} L^{-1}
+        try:
+            H_chol = torch.linalg.cholesky(H)
+            H_inv = torch.cholesky_inverse(H_chol)
+            Hinv = torch.linalg.cholesky(H_inv, upper=True)
+        except RuntimeError as e:
+            logger.warning(f"Cholesky failed for {name}, using pseudo-inverse: {e}")
+            Hinv = torch.linalg.pinv(H)
+            Hinv = torch.linalg.cholesky(Hinv + 1e-6 * torch.eye(columns, device=device), upper=True)
+        
+        # Initialize quantizer
+        quantizer = Quantizer_GPTQ()
+        quantizer.configure(
             bits=wbits,
             perchannel=True,
             sym=symmetric,
-            mse=True,  # Use MSE-based clipping
+            mse=True,
             group_size=group_size,
         )
         
-        # Add calibration batches
-        batch_size = 32
-        for i in range(0, calib.shape[0], batch_size):
-            batch = calib[i:i + batch_size]
-            with torch.no_grad():
-                out = layer(batch)
-            gptq.add_batch(batch, out)
+        # Storage for quantized weights
+        Q = torch.zeros_like(W)
+        Losses = torch.zeros_like(W)
         
-        # Perform quantization
-        gptq.fasterquant(
-            blocksize=128,
-            percdamp=percdamp,
-            groupsize=group_size,
-        )
+        # Block size for lazy batch updates
+        blocksize = 128
         
-        # Cleanup
-        gptq.free()
-        del calib
-        torch.cuda.empty_cache()
+        # Process columns in blocks for efficiency
+        for i1 in range(0, columns, blocksize):
+            i2 = min(i1 + blocksize, columns)
+            count = i2 - i1
+            
+            W1 = W[:, i1:i2].clone()
+            Q1 = torch.zeros_like(W1)
+            Err1 = torch.zeros_like(W1)
+            Losses1 = torch.zeros_like(W1)
+            Hinv1 = Hinv[i1:i2, i1:i2]
+            
+            for i in range(count):
+                w = W1[:, i]
+                d = Hinv1[i, i]
+                
+                # Update quantization params for group-wise quantization
+                if group_size > 0 and (i1 + i) % group_size == 0:
+                    quantizer.find_params(
+                        W[:, (i1 + i):min((i1 + i + group_size), columns)],
+                        weight=True
+                    )
+                
+                # Quantize current column
+                q = quantizer.quantize(w.unsqueeze(1)).flatten()
+                Q1[:, i] = q
+                
+                # Compute loss for this column
+                Losses1[:, i] = (w - q) ** 2 / d ** 2
+                
+                # Error compensation: update remaining weights in block
+                err1 = (w - q) / d
+                W1[:, i:] -= err1.unsqueeze(1).matmul(Hinv1[i, i:].unsqueeze(0))
+                Err1[:, i] = err1
+            
+            # Store results for this block
+            Q[:, i1:i2] = Q1
+            Losses[:, i1:i2] = Losses1 / 2
+            
+            # Propagate error to remaining columns
+            W[:, i2:] -= Err1.matmul(Hinv[i1:i2, i2:])
         
+        # Update layer weights
+        layer.weight.data = Q.to(layer.weight.dtype)
+        
+        # Track statistics
+        layer_loss = torch.sum(Losses).item()
+        total_loss += layer_loss
         quantized_count += 1
         
+        # Cleanup
+        del H, W, Q, Losses, Hinv
+        torch.cuda.empty_cache()
+        
         # Log progress
-        if (quantized_count % 50) == 0:
-            logger.info(f"Quantized {quantized_count}/{len(layer_names)} layers")
+        if quantized_count % 50 == 0:
+            logger.info(f"Quantized {quantized_count}/{len(layer_names)} layers, "
+                       f"cumulative loss: {total_loss:.4f}")
     
     logger.info(f"Quantization complete: {quantized_count} quantized, {skipped_count} skipped")
+    logger.info(f"Total quantization loss: {total_loss:.4f}")
     
     return transformer
 
@@ -328,12 +392,6 @@ def main():
         help="Output directory for quantized model"
     )
     
-    # Other settings
-    parser.add_argument(
-        "--max-calibration-samples", type=int, default=256,
-        help="Maximum calibration samples to use (default: 256)"
-    )
-    
     args = parser.parse_args()
     
     logger.info("=" * 60)
@@ -351,8 +409,8 @@ def main():
     device = "cuda"
     logger.info(f"GPU: {torch.cuda.get_device_name()}")
     
-    # Load calibration data (only needed for GPTQ)
-    calibration_data = None
+    # Load Hessian matrices (only needed for GPTQ)
+    hessians = None
     if args.method == "gptq":
         calib_path = Path(args.calibration_data)
         if not calib_path.exists():
@@ -360,11 +418,8 @@ def main():
             logger.error("Run 01_collect_calibration_data.py first!")
             return 1
         
-        logger.info("\nLoading calibration data...")
-        calibration_data = load_calibration_data(
-            calib_path,
-            max_samples=args.max_calibration_samples,
-        )
+        logger.info("\nLoading Hessian matrices...")
+        hessians, nsamples = load_hessians(calib_path)
     
     # Load transformer
     logger.info("\nLoading SD 3.5 Medium transformer...")
@@ -384,7 +439,7 @@ def main():
     if args.method == "gptq":
         transformer = quantize_transformer_gptq(
             transformer=transformer,
-            calibration_data=calibration_data,
+            hessians=hessians,
             wbits=args.wbits,
             group_size=args.group_size,
             percdamp=args.percdamp,

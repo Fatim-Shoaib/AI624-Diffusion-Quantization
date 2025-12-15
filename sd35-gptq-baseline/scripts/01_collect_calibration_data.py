@@ -1,29 +1,30 @@
 #!/usr/bin/env python3
 """
 =============================================================================
-Calibration Data Collection for GPTQ
+Calibration Data Collection for GPTQ (Optimized)
 =============================================================================
 
-This script collects calibration data (intermediate activations) needed for
-GPTQ quantization. The calibration data captures the input distributions
-to each layer during typical inference.
+This script collects calibration data needed for GPTQ quantization.
+Instead of storing all activations (which uses massive memory), we compute
+the Hessian matrix (H = X^T X) incrementally during inference.
 
-For SD 3.5 Medium (MMDiT), we need to collect:
-- Inputs to transformer blocks at various timesteps
-- Different prompts to capture diverse inputs
+This is mathematically equivalent to storing all activations and computing
+H later, but uses O(d^2) memory per layer instead of O(n*d) where:
+- d = layer input dimension
+- n = number of samples (which can be millions with timesteps)
 
 Usage:
-    python 01_collect_calibration_data.py --num-samples 256 --output-dir ./calibration_data
+    python 01_collect_calibration_data.py --num-samples 64 --output-dir ./calibration_data
 
-Requirements:
-    - RTX 4090 (24GB VRAM) recommended
-    - ~10GB disk space for calibration data
+For higher quality (takes longer):
+    python 01_collect_calibration_data.py --num-samples 128 --num-inference-steps 28
 """
 
 import argparse
 import logging
 import sys
 import time
+import json
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 import gc
@@ -44,7 +45,6 @@ from config import (
 )
 from models.sd35_loader import (
     load_sd35_pipeline,
-    get_transformer_blocks,
     get_gpu_memory_info,
 )
 
@@ -57,55 +57,93 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-class ActivationCollector:
+class HessianCollector:
     """
-    Collects intermediate activations during forward passes.
+    Collects Hessian matrices (H = X^T X) incrementally during forward passes.
     
-    Used to gather calibration data for GPTQ quantization.
+    This is memory-efficient because we only store the d×d Hessian matrix
+    per layer, not all the n×d activations.
+    
+    For GPTQ, we need H to compute the optimal quantization. Computing H
+    incrementally is mathematically equivalent to storing all activations.
     """
     
-    def __init__(self, max_samples: int = 256):
+    def __init__(self, device: torch.device = torch.device("cuda")):
         """
-        Initialize activation collector.
+        Initialize Hessian collector.
         
         Args:
-            max_samples: Maximum number of samples to collect per layer
+            device: Device to store Hessian matrices on
         """
-        self.max_samples = max_samples
-        self.activations: Dict[str, List[torch.Tensor]] = {}
+        self.device = device
+        self.hessians: Dict[str, torch.Tensor] = {}
+        self.nsamples: Dict[str, int] = {}
         self.hooks = []
-        self.sample_count = 0
+        self.enabled = True
         
     def _make_hook(self, name: str):
-        """Create a forward hook for a specific layer."""
+        """Create a forward hook that accumulates Hessian incrementally."""
         def hook(module, inp, out):
-            if name not in self.activations:
-                self.activations[name] = []
-            
+            if not self.enabled:
+                return
+                
             # Get input tensor
             x = inp[0] if isinstance(inp, tuple) else inp
             
-            # Only store if we haven't reached max samples
-            if len(self.activations[name]) < self.max_samples:
-                # Detach and move to CPU to save GPU memory
-                self.activations[name].append(x.detach().cpu())
+            # Handle different input shapes
+            if x.dim() == 2:
+                # [batch, features]
+                x = x.float()
+            elif x.dim() == 3:
+                # [batch, seq_len, features] -> flatten to [batch*seq_len, features]
+                x = x.reshape(-1, x.shape[-1]).float()
+            elif x.dim() == 4:
+                # [batch, channels, h, w] -> [batch*h*w, channels]
+                x = x.permute(0, 2, 3, 1).reshape(-1, x.shape[1]).float()
+            else:
+                return  # Skip unsupported shapes
+            
+            # Number of samples in this batch
+            n = x.shape[0]
+            
+            # Initialize Hessian if first time
+            if name not in self.hessians:
+                d = x.shape[1]
+                self.hessians[name] = torch.zeros((d, d), device=self.device, dtype=torch.float32)
+                self.nsamples[name] = 0
+            
+            # Incremental Hessian update: H_new = (n_old * H_old + X^T X) / (n_old + n_new)
+            # But for numerical stability, we accumulate X^T X and divide at the end
+            x = x.to(self.device)
+            self.hessians[name].add_(x.T @ x)
+            self.nsamples[name] += n
                 
         return hook
     
-    def register_hooks(self, model: nn.Module, layer_types: tuple = (nn.Linear,)):
+    def register_hooks(self, model: nn.Module, layer_names: Optional[List[str]] = None):
         """
-        Register forward hooks on specified layer types.
+        Register forward hooks on Linear layers.
         
         Args:
             model: Model to register hooks on
-            layer_types: Tuple of layer types to hook
+            layer_names: Optional list of specific layer names to hook (if None, hook all Linear)
         """
         for name, module in model.named_modules():
-            if isinstance(module, layer_types):
+            if isinstance(module, nn.Linear):
+                # Skip certain sensitive layers
+                skip_patterns = ["time_text_embed", "context_embedder", "pos_embed", "proj_out"]
+                should_skip = any(pattern in name for pattern in skip_patterns)
+                
+                if should_skip:
+                    continue
+                
+                if layer_names is not None and name not in layer_names:
+                    continue
+                    
                 hook = module.register_forward_hook(self._make_hook(name))
                 self.hooks.append(hook)
                 
-        logger.info(f"Registered {len(self.hooks)} hooks")
+        logger.info(f"Registered {len(self.hooks)} hooks for Hessian collection")
     
     def remove_hooks(self):
         """Remove all registered hooks."""
@@ -113,39 +151,37 @@ class ActivationCollector:
             hook.remove()
         self.hooks = []
     
-    def get_calibration_data(self) -> Dict[str, torch.Tensor]:
+    def get_hessians(self) -> Dict[str, torch.Tensor]:
         """
-        Get collected activations as concatenated tensors.
+        Get normalized Hessian matrices.
         
         Returns:
-            Dictionary mapping layer names to activation tensors
+            Dictionary mapping layer names to normalized Hessian matrices
         """
-        calibration_data = {}
-        
-        for name, activations in self.activations.items():
-            if activations:
-                # Concatenate along batch dimension
-                calibration_data[name] = torch.cat(activations, dim=0)
-                
-        return calibration_data
+        normalized = {}
+        for name, H in self.hessians.items():
+            n = self.nsamples[name]
+            if n > 0:
+                # Normalize by number of samples
+                normalized[name] = H / n
+            else:
+                normalized[name] = H
+        return normalized
     
     def clear(self):
-        """Clear collected activations."""
-        self.activations = {}
-        self.sample_count = 0
+        """Clear collected Hessians."""
+        self.hessians = {}
+        self.nsamples = {}
 
 
 def get_diverse_prompts(num_prompts: int) -> List[str]:
     """
     Get a diverse set of prompts for calibration.
     
-    Args:
-        num_prompts: Number of prompts needed
-        
-    Returns:
-        List of prompts
+    Quality note: Using diverse prompts ensures the Hessian captures
+    the full range of activations the model will see during inference.
     """
-    # Start with visual inspection prompts
+    # Start with visual inspection prompts (high quality, curated)
     prompts = DEFAULT_VISUAL_PROMPTS.copy()
     
     # Add more diverse prompts for better calibration coverage
@@ -155,33 +191,64 @@ def get_diverse_prompts(num_prompts: int) -> List[str]:
         "a blue car parked on a street",
         "a green tree in a park",
         "a yellow flower in a garden",
+        "a black cat sitting on a windowsill",
+        "a white dog running in a field",
         
         # Complex scenes
         "a busy city intersection with pedestrians and cars",
         "a peaceful countryside landscape with rolling hills",
         "an underwater scene with colorful coral and fish",
-        "a space station orbiting Earth",
+        "a space station orbiting Earth with stars in background",
+        "a medieval castle on a hilltop at sunset",
+        "a modern kitchen with stainless steel appliances",
         
         # Different styles
         "abstract art with vibrant colors and geometric shapes",
         "a watercolor painting of a sunset over the ocean",
-        "a pencil sketch of a human face",
-        "a digital art piece in cyberpunk style",
+        "a pencil sketch of a human face with detailed shading",
+        "a digital art piece in cyberpunk style with neon lights",
+        "an oil painting in impressionist style of a garden",
+        "a minimalist line drawing of a mountain landscape",
         
         # Various subjects
-        "a cute golden retriever puppy playing",
+        "a cute golden retriever puppy playing with a ball",
         "a majestic eagle soaring through clouds",
         "a detailed macro shot of a butterfly wing",
-        "a portrait of an elderly woman with wrinkles",
+        "a portrait of an elderly woman with kind eyes",
+        "a bowl of fresh fruit on a wooden table",
+        "a vintage car from the 1950s in cherry red",
         
         # Technical/challenging
-        "hands holding a crystal ball",
-        "a mirror reflecting a complex scene",
-        "text that says 'HELLO WORLD' on a sign",
-        "multiple people at a dinner table",
+        "human hands holding a glowing crystal",
+        "a mirror reflecting a beautiful sunset",
+        "text that says HELLO on a neon sign",
+        "multiple people having dinner at a restaurant",
+        "a glass of water with ice cubes and lemon",
+        "a bookshelf filled with colorful books",
+        
+        # Nature
+        "a waterfall in a tropical rainforest",
+        "northern lights over a snowy mountain",
+        "a field of sunflowers under blue sky",
+        "ocean waves crashing on rocky shore",
+        "a dense bamboo forest with morning mist",
+        "autumn leaves falling in a park",
+        
+        # Architecture
+        "a modern glass skyscraper reflecting clouds",
+        "an ancient Roman colosseum at golden hour",
+        "a cozy wooden cabin in snowy mountains",
+        "a Japanese temple with cherry blossoms",
+        "a futuristic city with flying vehicles",
+        "a rustic farmhouse with a red barn",
     ]
     
     prompts.extend(additional_prompts)
+    
+    # Shuffle for variety (but deterministically for reproducibility)
+    import random
+    rng = random.Random(42)
+    rng.shuffle(prompts)
     
     # Repeat if needed
     if num_prompts > len(prompts):
@@ -191,124 +258,72 @@ def get_diverse_prompts(num_prompts: int) -> List[str]:
     return prompts[:num_prompts]
 
 
-def collect_transformer_activations(
-    pipe,
-    prompts: List[str],
-    num_inference_steps: int = 28,
-    guidance_scale: float = 4.5,
-    seed: int = 42,
-    device: str = "cuda",
-) -> Dict[str, torch.Tensor]:
-    """
-    Collect activations from the transformer during generation.
-    
-    Args:
-        pipe: SD3 pipeline
-        prompts: List of prompts to run
-        num_inference_steps: Inference steps
-        guidance_scale: CFG scale
-        seed: Random seed
-        device: Device
-        
-    Returns:
-        Dictionary mapping layer names to activation tensors
-    """
-    # Initialize collector
-    collector = ActivationCollector(max_samples=len(prompts) * num_inference_steps)
-    
-    # Register hooks on transformer's linear layers
-    collector.register_hooks(pipe.transformer, layer_types=(nn.Linear,))
-    
-    generator = torch.Generator(device=device).manual_seed(seed)
-    
-    logger.info(f"Collecting activations for {len(prompts)} prompts...")
-    
-    try:
-        for i, prompt in enumerate(tqdm(prompts, desc="Collecting calibration data")):
-            generator.manual_seed(seed + i)
-            
-            with torch.no_grad():
-                _ = pipe(
-                    prompt=prompt,
-                    num_inference_steps=num_inference_steps,
-                    guidance_scale=guidance_scale,
-                    generator=generator,
-                    output_type="latent",  # Skip VAE decode to save time
-                )
-            
-            # Periodic memory cleanup
-            if (i + 1) % 10 == 0:
-                torch.cuda.empty_cache()
-                gc.collect()
-                
-    finally:
-        collector.remove_hooks()
-    
-    return collector.get_calibration_data()
-
-
-def save_calibration_data(
-    calibration_data: Dict[str, torch.Tensor],
+def save_hessians(
+    hessians: Dict[str, torch.Tensor],
+    nsamples: Dict[str, int],
     output_dir: Path,
-    chunk_size_mb: int = 500,
+    config: dict,
 ) -> None:
     """
-    Save calibration data to disk.
-    
-    Large tensors are saved in chunks to avoid memory issues.
+    Save Hessian matrices to disk.
     
     Args:
-        calibration_data: Dictionary of activations
+        hessians: Dictionary of Hessian matrices
+        nsamples: Dictionary of sample counts per layer
         output_dir: Output directory
-        chunk_size_mb: Maximum chunk size in MB
+        config: Configuration used for collection
     """
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Save metadata
     metadata = {
-        "num_layers": len(calibration_data),
+        "num_layers": len(hessians),
+        "config": config,
         "layers": {},
     }
     
-    for name, tensor in tqdm(calibration_data.items(), desc="Saving calibration data"):
+    # Save each Hessian
+    for name, H in tqdm(hessians.items(), desc="Saving Hessians"):
         # Create safe filename
         safe_name = name.replace(".", "_").replace("/", "_")
         
-        # Calculate tensor size
-        tensor_size_mb = tensor.numel() * tensor.element_size() / (1024 ** 2)
+        # Save as float32 for precision during quantization
+        H = H.cpu().float()
         
-        # Save tensor
-        tensor_path = output_dir / f"{safe_name}.pt"
-        torch.save(tensor, tensor_path)
+        tensor_path = output_dir / f"hessian_{safe_name}.pt"
+        torch.save(H, tensor_path)
         
         metadata["layers"][name] = {
-            "shape": list(tensor.shape),
-            "dtype": str(tensor.dtype),
-            "size_mb": tensor_size_mb,
+            "shape": list(H.shape),
             "file": str(tensor_path.name),
+            "nsamples": nsamples.get(name, 0),
         }
-        
-        logger.debug(f"Saved {name}: {tensor.shape}, {tensor_size_mb:.1f} MB")
     
     # Save metadata
-    import json
     metadata_path = output_dir / "metadata.json"
     with open(metadata_path, 'w') as f:
         json.dump(metadata, f, indent=2)
     
-    logger.info(f"Saved calibration data for {len(calibration_data)} layers")
+    # Calculate total size
+    total_size_mb = sum(
+        H.numel() * 4 / (1024 ** 2)  # float32 = 4 bytes
+        for H in hessians.values()
+    )
+    
+    logger.info(f"Saved Hessians for {len(hessians)} layers")
+    logger.info(f"Total size: {total_size_mb:.1f} MB")
     logger.info(f"Output directory: {output_dir}")
 
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Collect calibration data for GPTQ quantization",
+        description="Collect calibration data (Hessians) for GPTQ quantization",
     )
     
     parser.add_argument(
-        "--num-samples", type=int, default=256,
-        help="Number of calibration samples (prompts) to collect (default: 256)"
+        "--num-samples", type=int, default=64,
+        help="Number of calibration prompts (default: 64, recommended: 64-128)"
     )
     parser.add_argument(
         "--num-inference-steps", type=int, default=28,
@@ -335,8 +350,10 @@ def main():
     args = parser.parse_args()
     
     logger.info("=" * 60)
-    logger.info("Calibration Data Collection")
+    logger.info("Calibration Data Collection (Optimized)")
     logger.info("=" * 60)
+    logger.info(f"Number of prompts: {args.num_samples}")
+    logger.info(f"Inference steps: {args.num_inference_steps}")
     
     # Check GPU
     if not torch.cuda.is_available():
@@ -344,12 +361,13 @@ def main():
         return 1
     
     device = "cuda"
+    gpu_info = get_gpu_memory_info()
     logger.info(f"GPU: {torch.cuda.get_device_name()}")
-    logger.info(f"VRAM: {torch.cuda.get_device_properties(0).total_memory / 1e9:.1f} GB")
+    logger.info(f"VRAM: {gpu_info['total_gb']:.1f} GB")
     
     # Get prompts
     prompts = get_diverse_prompts(args.num_samples)
-    logger.info(f"Using {len(prompts)} prompts for calibration")
+    logger.info(f"Using {len(prompts)} diverse prompts for calibration")
     
     # Load model
     logger.info("\nLoading SD 3.5 Medium...")
@@ -359,21 +377,48 @@ def main():
         dtype=torch.float16,
     )
     
-    # Collect activations
-    logger.info("\nCollecting activations...")
+    # Initialize Hessian collector
+    logger.info("\nCollecting Hessian matrices...")
     start_time = time.time()
     
-    calibration_data = collect_transformer_activations(
-        pipe=pipe,
-        prompts=prompts,
-        num_inference_steps=args.num_inference_steps,
-        guidance_scale=args.guidance_scale,
-        seed=args.seed,
-        device=device,
-    )
+    collector = HessianCollector(device=torch.device(device))
+    collector.register_hooks(pipe.transformer)
+    
+    generator = torch.Generator(device=device).manual_seed(args.seed)
+    
+    # Estimate time
+    estimated_time = len(prompts) * 8 / 60  # ~8 seconds per prompt
+    logger.info(f"Estimated time: {estimated_time:.1f} minutes")
+    
+    for i, prompt in enumerate(tqdm(prompts, desc="Collecting calibration data")):
+        generator.manual_seed(args.seed + i)
+        
+        with torch.no_grad():
+            _ = pipe(
+                prompt=prompt,
+                num_inference_steps=args.num_inference_steps,
+                guidance_scale=args.guidance_scale,
+                generator=generator,
+                output_type="latent",  # Skip VAE decode
+            )
+        
+        # Log progress periodically
+        if (i + 1) % 10 == 0:
+            mem_gb = torch.cuda.memory_allocated() / (1024**3)
+            elapsed = time.time() - start_time
+            eta = elapsed / (i + 1) * (len(prompts) - i - 1)
+            logger.info(f"  Progress: {i+1}/{len(prompts)}, "
+                       f"GPU mem: {mem_gb:.1f} GB, "
+                       f"ETA: {eta/60:.1f} min")
+    
+    collector.remove_hooks()
     
     collection_time = time.time() - start_time
-    logger.info(f"Collection completed in {collection_time / 60:.1f} minutes")
+    logger.info(f"\nCollection completed in {collection_time / 60:.1f} minutes")
+    
+    # Get normalized Hessians
+    hessians = collector.get_hessians()
+    logger.info(f"Collected Hessians for {len(hessians)} layers")
     
     # Free GPU memory
     del pipe
@@ -383,17 +428,25 @@ def main():
     # Save calibration data
     logger.info("\nSaving calibration data...")
     output_dir = Path(args.output_dir)
-    save_calibration_data(calibration_data, output_dir)
     
-    # Calculate total size
-    total_size_mb = sum(
-        t.numel() * t.element_size() / (1024 ** 2) 
-        for t in calibration_data.values()
-    )
-    logger.info(f"Total calibration data size: {total_size_mb / 1024:.2f} GB")
+    config = {
+        "num_samples": args.num_samples,
+        "num_inference_steps": args.num_inference_steps,
+        "guidance_scale": args.guidance_scale,
+        "model_id": args.model_id,
+        "seed": args.seed,
+        "collection_time_minutes": collection_time / 60,
+    }
     
-    logger.info("\nCalibration data collection complete!")
+    save_hessians(hessians, collector.nsamples, output_dir, config)
+    
+    logger.info("\n" + "=" * 60)
+    logger.info("Calibration data collection complete!")
+    logger.info("=" * 60)
     logger.info(f"Output: {output_dir}")
+    logger.info(f"Layers: {len(hessians)}")
+    logger.info(f"Time: {collection_time / 60:.1f} minutes")
+    logger.info("\nNext step: Run 02_quantize_model.py")
     
     return 0
 
