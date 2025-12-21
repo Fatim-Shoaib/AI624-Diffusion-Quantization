@@ -1,0 +1,13 @@
+{
+  "method": "qronos",
+  "weight_bits": 4,
+  "group_size": 128,
+  "symmetric": true,
+  "percdamp": 1e-05,
+  "num_blocks": 100,
+  "act_order": false,
+  "original_size_gb": 4.600107550621033,
+  "quantized_size_gb": 4.600107550621033,
+  "compression_ratio": 1.0,
+  "quantization_time_minutes": 2.3732428312301637
+}

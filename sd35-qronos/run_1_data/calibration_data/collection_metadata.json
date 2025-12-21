@@ -1,0 +1,12 @@
+{
+  "num_samples": 256,
+  "num_timesteps_per_sample": 5,
+  "timestep_strategy": "uniform",
+  "collection_time_minutes": 1322.4657598137856,
+  "model_id": "stabilityai/stable-diffusion-3.5-medium",
+  "seed": 42,
+  "num_inference_steps": 28,
+  "guidance_scale": 4.5,
+  "height": 1024,
+  "width": 1024
+}

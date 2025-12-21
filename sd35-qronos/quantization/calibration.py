@@ -46,25 +46,19 @@ class ActivationCollector:
         # Dimensions
         self.in_features = layer.in_features
         
-        # Covariance matrices (on CPU for memory efficiency)
+        # Covariance matrices - ALWAYS on CPU to avoid OOM
+        # We'll compute on GPU and transfer results to CPU
         self.H = torch.zeros(
             (self.in_features, self.in_features),
             dtype=torch.float32,
-            device='cpu',
-            pin_memory=torch.cuda.is_available()
+            device='cpu'
         )
         self.G = torch.zeros(
             (self.in_features, self.in_features),
             dtype=torch.float32,
-            device='cpu',
-            pin_memory=torch.cuda.is_available()
+            device='cpu'
         )
-        self.B = torch.zeros(
-            (self.in_features, self.in_features),
-            dtype=torch.float32,
-            device='cpu',
-            pin_memory=torch.cuda.is_available()
-        )
+        # No buffer needed - compute directly
         
         self.nsamples = 0
         self.quant_input_cache = None
@@ -81,25 +75,28 @@ class ActivationCollector:
         if len(inp_tensor.shape) > 2:
             inp_tensor = inp_tensor.reshape(-1, inp_tensor.shape[-1])
         
-        inp_tensor = inp_tensor.to(torch.float32)
-        batch_size = inp_tensor.shape[0]
-        inp_t = inp_tensor.t()  # [features, batch]
+        # Move to CPU and convert to float32 for computation
+        inp_cpu = inp_tensor.detach().cpu().to(torch.float32)
+        batch_size = inp_cpu.shape[0]
+        inp_t = inp_cpu.t()  # [features, batch]
         
         if self.collecting_quant:
             # First pass: collecting quantized activations for H
             self.nsamples += batch_size
-            self.B.copy_(inp_t.cpu() @ inp_t.t().cpu())
+            # Compute H incrementally on CPU
+            H_update = inp_t @ inp_t.t()
             self.H *= (self.nsamples - batch_size) / self.nsamples
-            self.H += self.B / self.nsamples
+            self.H += H_update / self.nsamples
             
             # Cache for G computation
-            self.quant_input_cache = inp_t.cpu()
+            self.quant_input_cache = inp_t
         else:
             # Second pass: collecting float activations for G
             if self.quant_input_cache is not None:
-                self.B.copy_(self.quant_input_cache @ inp_t.t().cpu())
+                # Compute G: G = X̃ᵀX
+                G_update = self.quant_input_cache @ inp_t.t()
                 self.G *= (self.nsamples - batch_size) / self.nsamples
-                self.G += self.B / self.nsamples
+                self.G += G_update / self.nsamples
                 self.quant_input_cache = None
     
     def register_hook(self):
@@ -277,8 +274,15 @@ class CalibrationDataCollector:
         
         result = {}
         for name, info in tqdm(metadata['layers'].items(), desc="Loading calibration data"):
-            H = torch.load(calibration_dir / info['H_file'], map_location='cpu')
-            G = torch.load(calibration_dir / info['G_file'], map_location='cpu')
+            H = torch.load(calibration_dir / info['H_file'], map_location='cpu', weights_only=True)
+            G = torch.load(calibration_dir / info['G_file'], map_location='cpu', weights_only=True)
+            
+            # Ensure matrices are 2D (squeeze any extra dimensions)
+            while H.dim() > 2:
+                H = H.squeeze(-1)
+            while G.dim() > 2:
+                G = G.squeeze(-1)
+            
             result[name] = (H, G)
         
         print(f"Loaded calibration data for {len(result)} layers")
@@ -296,6 +300,8 @@ def collect_calibration_for_diffusion(
     width: int = 1024,
     seed: int = 42,
     device: str = "cuda",
+    checkpoint_dir: Optional[Path] = None,
+    checkpoint_every: int = 10,
 ) -> CalibrationDataCollector:
     """
     Collect calibration data for diffusion model quantization.
@@ -303,6 +309,7 @@ def collect_calibration_for_diffusion(
     This function handles the diffusion-specific aspects of calibration:
     1. Sampling across multiple timesteps
     2. Two-pass collection for Qronos (quantized then float)
+    3. Checkpointing to resume interrupted runs
     
     Args:
         pipe: StableDiffusion3Pipeline
@@ -315,6 +322,8 @@ def collect_calibration_for_diffusion(
         width: Image width
         seed: Random seed
         device: Device for computation
+        checkpoint_dir: Directory for checkpoints (None to disable)
+        checkpoint_every: Save checkpoint every N prompts
         
     Returns:
         CalibrationDataCollector with collected H and G matrices
@@ -326,6 +335,35 @@ def collect_calibration_for_diffusion(
         transformer=transformer,
         device=device,
     )
+    
+    # Check for existing checkpoint
+    start_prompt_idx = 0
+    if checkpoint_dir is not None:
+        checkpoint_dir = Path(checkpoint_dir)
+        checkpoint_dir.mkdir(parents=True, exist_ok=True)
+        checkpoint_file = checkpoint_dir / "calibration_checkpoint.pt"
+        progress_file = checkpoint_dir / "calibration_progress.json"
+        
+        if checkpoint_file.exists() and progress_file.exists():
+            print(f"Found checkpoint, loading...")
+            try:
+                # Load progress
+                with open(progress_file, 'r') as f:
+                    progress = json.load(f)
+                start_prompt_idx = progress['completed_prompts']
+                
+                # Load collector state
+                checkpoint = torch.load(checkpoint_file, map_location='cpu')
+                for name, (H, G, nsamples) in checkpoint.items():
+                    if name in collector.collectors:
+                        collector.collectors[name].H = H
+                        collector.collectors[name].G = G
+                        collector.collectors[name].nsamples = nsamples
+                
+                print(f"Resuming from prompt {start_prompt_idx}/{len(prompts)}")
+            except Exception as e:
+                print(f"Failed to load checkpoint: {e}, starting fresh")
+                start_prompt_idx = 0
     
     # Register hooks
     collector.register_hooks()
@@ -344,7 +382,13 @@ def collect_calibration_for_diffusion(
     generator = torch.Generator(device=device).manual_seed(seed)
     
     # Process each prompt
-    for prompt_idx, prompt in enumerate(tqdm(prompts, desc="Collecting calibration data")):
+    for prompt_idx, prompt in enumerate(tqdm(prompts, desc="Collecting calibration data", initial=start_prompt_idx)):
+        # Skip already processed prompts
+        if prompt_idx < start_prompt_idx:
+            continue
+        
+        print(f"\n[Prompt {prompt_idx+1}/{len(prompts)}] {prompt[:50]}...")
+        print(f"  Encoding prompt...", end=" ")
         # Encode prompt
         prompt_embeds, negative_prompt_embeds, pooled_prompt_embeds, negative_pooled_prompt_embeds = (
             pipe.encode_prompt(
@@ -356,6 +400,7 @@ def collect_calibration_for_diffusion(
                 do_classifier_free_guidance=guidance_scale > 1.0,
             )
         )
+        print("done")
         
         # Prepare latents
         num_channels_latents = pipe.transformer.config.in_channels
@@ -382,7 +427,10 @@ def collect_calibration_for_diffusion(
             
             # Expand latents for classifier-free guidance
             latent_model_input = torch.cat([latents] * 2) if guidance_scale > 1.0 else latents
-            latent_model_input = pipe.scheduler.scale_model_input(latent_model_input, t)
+            
+            # SD 3.5 uses Flow Matching - scale_model_input may not exist
+            if hasattr(pipe.scheduler, 'scale_model_input'):
+                latent_model_input = pipe.scheduler.scale_model_input(latent_model_input, t)
             
             # Prepare timestep
             timestep = t.expand(latent_model_input.shape[0])
@@ -390,6 +438,8 @@ def collect_calibration_for_diffusion(
             # =========================================================
             # QRONOS: Two-pass collection
             # =========================================================
+            
+            print(f"  [Timestep {t_idx.item()}/{num_inference_steps}] Running forward passes...", end=" ")
             
             # Pass 1: Collect with quantized activations (for H matrix)
             # Note: In full implementation, input quantization would be enabled here
@@ -405,6 +455,8 @@ def collect_calibration_for_diffusion(
                     return_dict=False,
                 )[0]
             
+            print("H done...", end=" ")
+            
             # Pass 2: Collect with float activations (for G matrix)
             collector.set_collecting_mode(quant=False)
             
@@ -416,6 +468,8 @@ def collect_calibration_for_diffusion(
                     pooled_projections=pooled_prompt_embeds,
                     return_dict=False,
                 )[0]
+            
+            print("G done ✓")
             
             # Take one denoising step to get new latents for next timestep
             if t_idx < len(timesteps) - 1:
@@ -440,6 +494,16 @@ def collect_calibration_for_diffusion(
         if (prompt_idx + 1) % 10 == 0:
             torch.cuda.empty_cache()
             gc.collect()
+        
+        # Save checkpoint periodically
+        if checkpoint_dir is not None and (prompt_idx + 1) % checkpoint_every == 0:
+            print(f"\nSaving checkpoint at prompt {prompt_idx + 1}...")
+            checkpoint_data = {}
+            for name, col in collector.collectors.items():
+                checkpoint_data[name] = (col.H.clone(), col.G.clone(), col.nsamples)
+            torch.save(checkpoint_data, checkpoint_dir / "calibration_checkpoint.pt")
+            with open(checkpoint_dir / "calibration_progress.json", 'w') as f:
+                json.dump({'completed_prompts': prompt_idx + 1, 'total_prompts': len(prompts)}, f)
     
     # Remove hooks
     collector.remove_hooks()
