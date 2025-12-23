@@ -193,6 +193,8 @@ def main():
         width=MODEL_CONFIG.default_width,
         seed=args.seed,
         device=device,
+        checkpoint_dir=Path(args.output_dir),
+        checkpoint_every=10,
     )
     
     collection_time = time.time() - start_time

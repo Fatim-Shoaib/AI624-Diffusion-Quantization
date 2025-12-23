@@ -1,0 +1,62 @@
+[
+  {
+    "n_layers": 1,
+    "image_mean": 82.55360666910808,
+    "is_black": false
+  },
+  {
+    "n_layers": 5,
+    "image_mean": 55.32841237386068,
+    "is_black": false
+  },
+  {
+    "n_layers": 10,
+    "image_mean": 61.13799158732096,
+    "is_black": false
+  },
+  {
+    "n_layers": 20,
+    "image_mean": 62.073933919270836,
+    "is_black": false
+  },
+  {
+    "n_layers": 50,
+    "image_mean": 64.64748128255208,
+    "is_black": false
+  },
+  {
+    "n_layers": 100,
+    "image_mean": 71.05715688069661,
+    "is_black": false
+  },
+  {
+    "n_layers": 150,
+    "image_mean": 86.0744120279948,
+    "is_black": false
+  },
+  {
+    "n_layers": 200,
+    "image_mean": 86.40488942464192,
+    "is_black": false
+  },
+  {
+    "n_layers": 250,
+    "image_mean": 85.0641377766927,
+    "is_black": false
+  },
+  {
+    "n_layers": 300,
+    "image_mean": 83.04726918538411,
+    "is_black": false
+  },
+  {
+    "n_layers": 350,
+    "image_mean": 92.08619817097981,
+    "is_black": false
+  },
+  {
+    "n_layers": 392,
+    "image_mean": 96.01120885213216,
+    "is_black": false
+  }
+]

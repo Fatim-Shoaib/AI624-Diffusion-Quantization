@@ -1,0 +1,7607 @@
+[
+  {
+    "name": "pos_embed.proj.weight",
+    "shape": [
+      1536,
+      16,
+      2,
+      2
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.024398362264037132,
+    "quant_mean": 0.024398362264037132,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "time_text_embed.timestep_embedder.linear_1.weight",
+    "shape": [
+      1536,
+      256
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.01160926092416048,
+    "quant_mean": 0.01160926092416048,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "time_text_embed.timestep_embedder.linear_2.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03175901621580124,
+    "quant_mean": 0.03175901621580124,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "time_text_embed.text_embedder.linear_1.weight",
+    "shape": [
+      1536,
+      2048
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.034294385462999344,
+    "quant_mean": 0.034294385462999344,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "time_text_embed.text_embedder.linear_2.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.023398352786898613,
+    "quant_mean": 0.023398352786898613,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "context_embedder.weight",
+    "shape": [
+      1536,
+      4096
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03852349519729614,
+    "quant_mean": 0.03852349519729614,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006156794726848602,
+    "quant_mean": 0.006156794726848602,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.01624629646539688,
+    "quant_mean": 0.01624629646539688,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.0572509765625,
+    "quant_mean": 1.0572509765625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.0863037109375,
+    "quant_mean": 1.0863037109375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.019150510430336,
+    "quant_mean": 0.018883638083934784,
+    "max_diff": 0.05322265625,
+    "mean_diff": 0.0030437333043664694,
+    "rel_diff": 0.15893736754772186
+  },
+  {
+    "name": "transformer_blocks.0.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.025044584646821022,
+    "quant_mean": 0.025044584646821022,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.023956801742315292,
+    "quant_mean": 0.023956801742315292,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.031917374581098557,
+    "quant_mean": 0.031917374581098557,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.024977199733257294,
+    "quant_mean": 0.024977199733257294,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03197471797466278,
+    "quant_mean": 0.03212462738156319,
+    "max_diff": 0.0865478515625,
+    "mean_diff": 0.007361951749771833,
+    "rel_diff": 0.2302428266350083
+  },
+  {
+    "name": "transformer_blocks.0.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.01577221043407917,
+    "quant_mean": 0.01562284305691719,
+    "max_diff": 0.02496337890625,
+    "mean_diff": 0.002161735435947776,
+    "rel_diff": 0.13705967685291132
+  },
+  {
+    "name": "transformer_blocks.0.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03067304939031601,
+    "quant_mean": 0.030436750501394272,
+    "max_diff": 0.0299072265625,
+    "mean_diff": 0.003938330337405205,
+    "rel_diff": 0.1283970499091656
+  },
+  {
+    "name": "transformer_blocks.0.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.98583984375,
+    "quant_mean": 0.98583984375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.983154296875,
+    "quant_mean": 0.983154296875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.05712890625,
+    "quant_mean": 1.05712890625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.078369140625,
+    "quant_mean": 1.078369140625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.01908564381301403,
+    "quant_mean": 0.018818523734807968,
+    "max_diff": 0.0517578125,
+    "mean_diff": 0.0030367050785571337,
+    "rel_diff": 0.15910930316081076
+  },
+  {
+    "name": "transformer_blocks.0.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.024880101904273033,
+    "quant_mean": 0.024880101904273033,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.023913968354463577,
+    "quant_mean": 0.023913968354463577,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.0.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005340322386473417,
+    "quant_mean": 0.005291310139000416,
+    "max_diff": 0.00872802734375,
+    "mean_diff": 0.0007284032180905342,
+    "rel_diff": 0.13639660706054818
+  },
+  {
+    "name": "transformer_blocks.0.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.016926858574151993,
+    "quant_mean": 0.0166438240557909,
+    "max_diff": 0.0941162109375,
+    "mean_diff": 0.002889652969315648,
+    "rel_diff": 0.1707139720886274
+  },
+  {
+    "name": "transformer_blocks.0.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.018385425209999084,
+    "quant_mean": 0.018242590129375458,
+    "max_diff": 0.11126708984375,
+    "mean_diff": 0.006419427692890167,
+    "rel_diff": 0.3491583212236882
+  },
+  {
+    "name": "transformer_blocks.0.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04038272425532341,
+    "quant_mean": 0.04058653116226196,
+    "max_diff": 0.166748046875,
+    "mean_diff": 0.01064434926956892,
+    "rel_diff": 0.26358664082201766
+  },
+  {
+    "name": "transformer_blocks.0.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03788961470127106,
+    "quant_mean": 0.04046773537993431,
+    "max_diff": 0.446044921875,
+    "mean_diff": 0.01433771476149559,
+    "rel_diff": 0.3784074103276777
+  },
+  {
+    "name": "transformer_blocks.1.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006089416332542896,
+    "quant_mean": 0.006089416332542896,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.014527992345392704,
+    "quant_mean": 0.014527992345392704,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.5098876953125,
+    "quant_mean": 1.5098876953125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.451171875,
+    "quant_mean": 1.451171875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02433059550821781,
+    "quant_mean": 0.0438656248152256,
+    "max_diff": 0.9453125,
+    "mean_diff": 0.03404051065444946,
+    "rel_diff": 1.3990819358339466
+  },
+  {
+    "name": "transformer_blocks.1.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02383403666317463,
+    "quant_mean": 0.02383403666317463,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.023185890167951584,
+    "quant_mean": 0.023185890167951584,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.023261820897459984,
+    "quant_mean": 0.023261820897459984,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.01595301367342472,
+    "quant_mean": 0.01595301367342472,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0255556870251894,
+    "quant_mean": 0.02592640370130539,
+    "max_diff": 0.0937652587890625,
+    "mean_diff": 0.006886346265673637,
+    "rel_diff": 0.2694642317478563
+  },
+  {
+    "name": "transformer_blocks.1.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02638738974928856,
+    "quant_mean": 0.02898263931274414,
+    "max_diff": 0.202880859375,
+    "mean_diff": 0.012702076695859432,
+    "rel_diff": 0.4813690176578273
+  },
+  {
+    "name": "transformer_blocks.1.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.024983450770378113,
+    "quant_mean": 0.02480212040245533,
+    "max_diff": 0.03131103515625,
+    "mean_diff": 0.0031258149538189173,
+    "rel_diff": 0.12511537062651745
+  },
+  {
+    "name": "transformer_blocks.1.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.97418212890625,
+    "quant_mean": 0.97418212890625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.9970703125,
+    "quant_mean": 0.9970703125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3553466796875,
+    "quant_mean": 1.3553466796875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.328125,
+    "quant_mean": 1.328125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.024283498525619507,
+    "quant_mean": 0.04165162518620491,
+    "max_diff": 0.638916015625,
+    "mean_diff": 0.032848671078681946,
+    "rel_diff": 1.3527151994542324
+  },
+  {
+    "name": "transformer_blocks.1.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02371249347925186,
+    "quant_mean": 0.02371249347925186,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.023193396627902985,
+    "quant_mean": 0.023193396627902985,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.1.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.008916663005948067,
+    "quant_mean": 0.009202279150485992,
+    "max_diff": 0.0416259765625,
+    "mean_diff": 0.003278654534369707,
+    "rel_diff": 0.3676993125331171
+  },
+  {
+    "name": "transformer_blocks.1.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.029682090505957603,
+    "quant_mean": 0.033768199384212494,
+    "max_diff": 0.4676513671875,
+    "mean_diff": 0.01649126596748829,
+    "rel_diff": 0.555596325272811
+  },
+  {
+    "name": "transformer_blocks.1.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.029798872768878937,
+    "quant_mean": 0.029539622366428375,
+    "max_diff": 0.055908203125,
+    "mean_diff": 0.006772071123123169,
+    "rel_diff": 0.2272592290002133
+  },
+  {
+    "name": "transformer_blocks.1.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02941957116127014,
+    "quant_mean": 0.031182358041405678,
+    "max_diff": 0.214599609375,
+    "mean_diff": 0.012679006904363632,
+    "rel_diff": 0.43097169993212225
+  },
+  {
+    "name": "transformer_blocks.1.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.022534320130944252,
+    "quant_mean": 0.022232048213481903,
+    "max_diff": 0.0460205078125,
+    "mean_diff": 0.003577691735699773,
+    "rel_diff": 0.15876627860292455
+  },
+  {
+    "name": "transformer_blocks.2.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006613206118345261,
+    "quant_mean": 0.006613206118345261,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.013069914653897285,
+    "quant_mean": 0.013069914653897285,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2791748046875,
+    "quant_mean": 1.2791748046875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2335205078125,
+    "quant_mean": 1.2335205078125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036926910281181335,
+    "quant_mean": 0.041026074439287186,
+    "max_diff": 0.50537109375,
+    "mean_diff": 0.01563350297510624,
+    "rel_diff": 0.42336330395452365
+  },
+  {
+    "name": "transformer_blocks.2.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035669125616550446,
+    "quant_mean": 0.035669125616550446,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.030745897442102432,
+    "quant_mean": 0.030745897442102432,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0362807959318161,
+    "quant_mean": 0.0362807959318161,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03413674607872963,
+    "quant_mean": 0.03413674607872963,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03515785187482834,
+    "quant_mean": 0.03539564833045006,
+    "max_diff": 0.12579345703125,
+    "mean_diff": 0.008502581156790257,
+    "rel_diff": 0.24184010924958363
+  },
+  {
+    "name": "transformer_blocks.2.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03153238818049431,
+    "quant_mean": 0.0315672904253006,
+    "max_diff": 0.0576171875,
+    "mean_diff": 0.007862626574933529,
+    "rel_diff": 0.24935073221919693
+  },
+  {
+    "name": "transformer_blocks.2.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03842047229409218,
+    "quant_mean": 0.03835882246494293,
+    "max_diff": 0.06378173828125,
+    "mean_diff": 0.008293014019727707,
+    "rel_diff": 0.21584877452209658
+  },
+  {
+    "name": "transformer_blocks.2.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.01568603515625,
+    "quant_mean": 1.01568603515625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.023193359375,
+    "quant_mean": 1.023193359375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.21728515625,
+    "quant_mean": 1.21728515625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1871337890625,
+    "quant_mean": 1.1871337890625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03687627613544464,
+    "quant_mean": 0.03852029889822006,
+    "max_diff": 0.4365234375,
+    "mean_diff": 0.013174276798963547,
+    "rel_diff": 0.3572560628956812
+  },
+  {
+    "name": "transformer_blocks.2.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035606544464826584,
+    "quant_mean": 0.035606544464826584,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.030782844871282578,
+    "quant_mean": 0.030782844871282578,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.2.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.010570592246949673,
+    "quant_mean": 0.010546926409006119,
+    "max_diff": 0.0169677734375,
+    "mean_diff": 0.0025083422660827637,
+    "rel_diff": 0.2372941680599692
+  },
+  {
+    "name": "transformer_blocks.2.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03566889092326164,
+    "quant_mean": 0.03665916994214058,
+    "max_diff": 0.52264404296875,
+    "mean_diff": 0.01254559401422739,
+    "rel_diff": 0.35172359364865435
+  },
+  {
+    "name": "transformer_blocks.2.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03376828134059906,
+    "quant_mean": 0.03342943638563156,
+    "max_diff": 0.11444091796875,
+    "mean_diff": 0.007097204681485891,
+    "rel_diff": 0.21017363922565543
+  },
+  {
+    "name": "transformer_blocks.2.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04118116572499275,
+    "quant_mean": 0.04144639894366264,
+    "max_diff": 0.1583251953125,
+    "mean_diff": 0.0113540543243289,
+    "rel_diff": 0.2757098146043983
+  },
+  {
+    "name": "transformer_blocks.2.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039453279227018356,
+    "quant_mean": 0.04121456667780876,
+    "max_diff": 0.513916015625,
+    "mean_diff": 0.012854017317295074,
+    "rel_diff": 0.3258034391842899
+  },
+  {
+    "name": "transformer_blocks.3.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006705049891024828,
+    "quant_mean": 0.006705049891024828,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.011422587558627129,
+    "quant_mean": 0.011422587558627129,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.6170654296875,
+    "quant_mean": 1.6170654296875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.540283203125,
+    "quant_mean": 1.540283203125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03468424454331398,
+    "quant_mean": 0.03538627550005913,
+    "max_diff": 0.38238525390625,
+    "mean_diff": 0.010685795918107033,
+    "rel_diff": 0.30808780695466653
+  },
+  {
+    "name": "transformer_blocks.3.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.032285839319229126,
+    "quant_mean": 0.032285839319229126,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03724722936749458,
+    "quant_mean": 0.03724722936749458,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03312911093235016,
+    "quant_mean": 0.03312911093235016,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02662556618452072,
+    "quant_mean": 0.02662556618452072,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03143409267067909,
+    "quant_mean": 0.031703971326351166,
+    "max_diff": 0.1668701171875,
+    "mean_diff": 0.007895709946751595,
+    "rel_diff": 0.2511829279642999
+  },
+  {
+    "name": "transformer_blocks.3.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03424127772450447,
+    "quant_mean": 0.03454386442899704,
+    "max_diff": 0.0762939453125,
+    "mean_diff": 0.01002231240272522,
+    "rel_diff": 0.2926967140769312
+  },
+  {
+    "name": "transformer_blocks.3.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036672934889793396,
+    "quant_mean": 0.03707914054393768,
+    "max_diff": 0.1192626953125,
+    "mean_diff": 0.010306260548532009,
+    "rel_diff": 0.28103171369257524
+  },
+  {
+    "name": "transformer_blocks.3.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.9873046875,
+    "quant_mean": 0.9873046875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.0089111328125,
+    "quant_mean": 1.0089111328125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.4129638671875,
+    "quant_mean": 1.4129638671875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.373291015625,
+    "quant_mean": 1.373291015625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03476846218109131,
+    "quant_mean": 0.03683999180793762,
+    "max_diff": 0.481201171875,
+    "mean_diff": 0.013767775148153305,
+    "rel_diff": 0.39598447341729476
+  },
+  {
+    "name": "transformer_blocks.3.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.032640594989061356,
+    "quant_mean": 0.032640594989061356,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.037329889833927155,
+    "quant_mean": 0.037329889833927155,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.3.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.011603998020291328,
+    "quant_mean": 0.01149742305278778,
+    "max_diff": 0.010406494140625,
+    "mean_diff": 0.001549211679957807,
+    "rel_diff": 0.133506601964492
+  },
+  {
+    "name": "transformer_blocks.3.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03698911517858505,
+    "quant_mean": 0.03708779811859131,
+    "max_diff": 0.3114013671875,
+    "mean_diff": 0.01127612218260765,
+    "rel_diff": 0.3048496586000901
+  },
+  {
+    "name": "transformer_blocks.3.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035169608891010284,
+    "quant_mean": 0.03474678099155426,
+    "max_diff": 0.1285400390625,
+    "mean_diff": 0.00744950445368886,
+    "rel_diff": 0.21181646797978324
+  },
+  {
+    "name": "transformer_blocks.3.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03979310765862465,
+    "quant_mean": 0.0399659164249897,
+    "max_diff": 0.14111328125,
+    "mean_diff": 0.010328498668968678,
+    "rel_diff": 0.2595548998591747
+  },
+  {
+    "name": "transformer_blocks.3.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03858925402164459,
+    "quant_mean": 0.03994825854897499,
+    "max_diff": 0.607421875,
+    "mean_diff": 0.010846583172678947,
+    "rel_diff": 0.2810777413789269
+  },
+  {
+    "name": "transformer_blocks.4.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006226315163075924,
+    "quant_mean": 0.006226315163075924,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.011362742632627487,
+    "quant_mean": 0.011362742632627487,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3563232421875,
+    "quant_mean": 1.3563232421875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2841796875,
+    "quant_mean": 1.2841796875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.038937270641326904,
+    "quant_mean": 0.039140380918979645,
+    "max_diff": 0.3343505859375,
+    "mean_diff": 0.010163403116166592,
+    "rel_diff": 0.2610198490692606
+  },
+  {
+    "name": "transformer_blocks.4.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03758116066455841,
+    "quant_mean": 0.03758116066455841,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0375262089073658,
+    "quant_mean": 0.0375262089073658,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.037809960544109344,
+    "quant_mean": 0.037809960544109344,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.037040531635284424,
+    "quant_mean": 0.037040531635284424,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03661908581852913,
+    "quant_mean": 0.036612216383218765,
+    "max_diff": 0.2464599609375,
+    "mean_diff": 0.007890533655881882,
+    "rel_diff": 0.21547592805088595
+  },
+  {
+    "name": "transformer_blocks.4.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0351218581199646,
+    "quant_mean": 0.034914519637823105,
+    "max_diff": 0.0504150390625,
+    "mean_diff": 0.008075941354036331,
+    "rel_diff": 0.2299405409316955
+  },
+  {
+    "name": "transformer_blocks.4.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04110249504446983,
+    "quant_mean": 0.04100487008690834,
+    "max_diff": 0.061614990234375,
+    "mean_diff": 0.008826411329209805,
+    "rel_diff": 0.21474144506910925
+  },
+  {
+    "name": "transformer_blocks.4.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.0379638671875,
+    "quant_mean": 1.0379638671875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.03662109375,
+    "quant_mean": 1.03662109375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.26220703125,
+    "quant_mean": 1.26220703125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2144775390625,
+    "quant_mean": 1.2144775390625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03893403708934784,
+    "quant_mean": 0.03994452953338623,
+    "max_diff": 0.44384765625,
+    "mean_diff": 0.012608061544597149,
+    "rel_diff": 0.3238312604816942
+  },
+  {
+    "name": "transformer_blocks.4.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03757711127400398,
+    "quant_mean": 0.03757711127400398,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03755292296409607,
+    "quant_mean": 0.03755292296409607,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.4.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.011779461055994034,
+    "quant_mean": 0.011697866953909397,
+    "max_diff": 0.0185546875,
+    "mean_diff": 0.002663988620042801,
+    "rel_diff": 0.22615519893715594
+  },
+  {
+    "name": "transformer_blocks.4.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03743995726108551,
+    "quant_mean": 0.03731577843427658,
+    "max_diff": 0.438720703125,
+    "mean_diff": 0.01073536742478609,
+    "rel_diff": 0.2867354917787083
+  },
+  {
+    "name": "transformer_blocks.4.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03593888133764267,
+    "quant_mean": 0.03553730621933937,
+    "max_diff": 0.1142578125,
+    "mean_diff": 0.007384918630123138,
+    "rel_diff": 0.20548543250103316
+  },
+  {
+    "name": "transformer_blocks.4.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.040213443338871,
+    "quant_mean": 0.04018975794315338,
+    "max_diff": 0.157958984375,
+    "mean_diff": 0.01036720722913742,
+    "rel_diff": 0.2578044502115988
+  },
+  {
+    "name": "transformer_blocks.4.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04035157710313797,
+    "quant_mean": 0.041453562676906586,
+    "max_diff": 0.8193359375,
+    "mean_diff": 0.01106298714876175,
+    "rel_diff": 0.27416485801376145
+  },
+  {
+    "name": "transformer_blocks.5.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005995619110763073,
+    "quant_mean": 0.005995619110763073,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0101667745038867,
+    "quant_mean": 0.0101667745038867,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.320068359375,
+    "quant_mean": 1.320068359375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2674560546875,
+    "quant_mean": 1.2674560546875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03904036432504654,
+    "quant_mean": 0.039290860295295715,
+    "max_diff": 0.43556976318359375,
+    "mean_diff": 0.009318373166024685,
+    "rel_diff": 0.23868554866920008
+  },
+  {
+    "name": "transformer_blocks.5.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036896321922540665,
+    "quant_mean": 0.036896321922540665,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03971579670906067,
+    "quant_mean": 0.03971579670906067,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039026033133268356,
+    "quant_mean": 0.039026033133268356,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03637693449854851,
+    "quant_mean": 0.03637693449854851,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03600163012742996,
+    "quant_mean": 0.03596598654985428,
+    "max_diff": 0.190673828125,
+    "mean_diff": 0.007452927529811859,
+    "rel_diff": 0.20701633324014615
+  },
+  {
+    "name": "transformer_blocks.5.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036178745329380035,
+    "quant_mean": 0.03589905798435211,
+    "max_diff": 0.04852294921875,
+    "mean_diff": 0.007463615853339434,
+    "rel_diff": 0.20629830366989937
+  },
+  {
+    "name": "transformer_blocks.5.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04058261215686798,
+    "quant_mean": 0.04039516672492027,
+    "max_diff": 0.05645751953125,
+    "mean_diff": 0.008182783611118793,
+    "rel_diff": 0.20163269833795064
+  },
+  {
+    "name": "transformer_blocks.5.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.0103759765625,
+    "quant_mean": 1.0103759765625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.0506591796875,
+    "quant_mean": 1.0506591796875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2344970703125,
+    "quant_mean": 1.2344970703125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1990966796875,
+    "quant_mean": 1.1990966796875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039016298949718475,
+    "quant_mean": 0.041364822536706924,
+    "max_diff": 0.4044189453125,
+    "mean_diff": 0.01536796148866415,
+    "rel_diff": 0.3938855802190135
+  },
+  {
+    "name": "transformer_blocks.5.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03686106950044632,
+    "quant_mean": 0.03686106950044632,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03971394523978233,
+    "quant_mean": 0.03971394523978233,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.5.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.012123040854930878,
+    "quant_mean": 0.012065242044627666,
+    "max_diff": 0.0181884765625,
+    "mean_diff": 0.002616466023027897,
+    "rel_diff": 0.21582570710438675
+  },
+  {
+    "name": "transformer_blocks.5.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03748885914683342,
+    "quant_mean": 0.03718448430299759,
+    "max_diff": 0.237060546875,
+    "mean_diff": 0.010772486217319965,
+    "rel_diff": 0.2873515916184921
+  },
+  {
+    "name": "transformer_blocks.5.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03582854941487312,
+    "quant_mean": 0.03542034327983856,
+    "max_diff": 0.1646728515625,
+    "mean_diff": 0.0074659353122115135,
+    "rel_diff": 0.20837944461457358
+  },
+  {
+    "name": "transformer_blocks.5.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04023061692714691,
+    "quant_mean": 0.040027450770139694,
+    "max_diff": 0.146881103515625,
+    "mean_diff": 0.009748115204274654,
+    "rel_diff": 0.24230582391687264
+  },
+  {
+    "name": "transformer_blocks.5.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.040607914328575134,
+    "quant_mean": 0.041063666343688965,
+    "max_diff": 0.65576171875,
+    "mean_diff": 0.009953734464943409,
+    "rel_diff": 0.24511803125921233
+  },
+  {
+    "name": "transformer_blocks.6.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005707587581127882,
+    "quant_mean": 0.005707587581127882,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.00928063876926899,
+    "quant_mean": 0.00928063876926899,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3221435546875,
+    "quant_mean": 1.3221435546875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2686767578125,
+    "quant_mean": 1.2686767578125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03813867270946503,
+    "quant_mean": 0.03811539337038994,
+    "max_diff": 0.2110595703125,
+    "mean_diff": 0.008979438804090023,
+    "rel_diff": 0.2354417658442503
+  },
+  {
+    "name": "transformer_blocks.6.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03646260127425194,
+    "quant_mean": 0.03646260127425194,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03888918086886406,
+    "quant_mean": 0.03888918086886406,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03948507085442543,
+    "quant_mean": 0.03948507085442543,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03955397009849548,
+    "quant_mean": 0.03955397009849548,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036917295306921005,
+    "quant_mean": 0.03678847849369049,
+    "max_diff": 0.17449951171875,
+    "mean_diff": 0.0074576810002326965,
+    "rel_diff": 0.20201043760457188
+  },
+  {
+    "name": "transformer_blocks.6.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0366351455450058,
+    "quant_mean": 0.03637905791401863,
+    "max_diff": 0.053314208984375,
+    "mean_diff": 0.007803502958267927,
+    "rel_diff": 0.21300586396259266
+  },
+  {
+    "name": "transformer_blocks.6.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0418020635843277,
+    "quant_mean": 0.041613783687353134,
+    "max_diff": 0.057037353515625,
+    "mean_diff": 0.008598480373620987,
+    "rel_diff": 0.20569506812324023
+  },
+  {
+    "name": "transformer_blocks.6.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.069580078125,
+    "quant_mean": 1.069580078125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.051025390625,
+    "quant_mean": 1.051025390625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2498779296875,
+    "quant_mean": 1.2498779296875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2080078125,
+    "quant_mean": 1.2080078125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03809790685772896,
+    "quant_mean": 0.03883695602416992,
+    "max_diff": 0.3526611328125,
+    "mean_diff": 0.011384065262973309,
+    "rel_diff": 0.29881070152694744
+  },
+  {
+    "name": "transformer_blocks.6.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03643741086125374,
+    "quant_mean": 0.03643741086125374,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.038923267275094986,
+    "quant_mean": 0.038923267275094986,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.6.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.012273067608475685,
+    "quant_mean": 0.012197151780128479,
+    "max_diff": 0.018768310546875,
+    "mean_diff": 0.00262449705041945,
+    "rel_diff": 0.21384180351039206
+  },
+  {
+    "name": "transformer_blocks.6.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03720465674996376,
+    "quant_mean": 0.036705706268548965,
+    "max_diff": 0.2213134765625,
+    "mean_diff": 0.010765103623270988,
+    "rel_diff": 0.28934820719181614
+  },
+  {
+    "name": "transformer_blocks.6.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03572728857398033,
+    "quant_mean": 0.03534713760018349,
+    "max_diff": 0.17083740234375,
+    "mean_diff": 0.00768679054453969,
+    "rel_diff": 0.21515174254282596
+  },
+  {
+    "name": "transformer_blocks.6.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0398031510412693,
+    "quant_mean": 0.039538174867630005,
+    "max_diff": 0.1607666015625,
+    "mean_diff": 0.009426840580999851,
+    "rel_diff": 0.23683648068116436
+  },
+  {
+    "name": "transformer_blocks.6.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.040270134806632996,
+    "quant_mean": 0.04034831002354622,
+    "max_diff": 0.3388671875,
+    "mean_diff": 0.009055285714566708,
+    "rel_diff": 0.2248635001946948
+  },
+  {
+    "name": "transformer_blocks.7.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005554231349378824,
+    "quant_mean": 0.005554231349378824,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.00824230071157217,
+    "quant_mean": 0.00824230071157217,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.4188232421875,
+    "quant_mean": 1.4188232421875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.37158203125,
+    "quant_mean": 1.37158203125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039090897887945175,
+    "quant_mean": 0.039131153374910355,
+    "max_diff": 0.29266357421875,
+    "mean_diff": 0.010048339143395424,
+    "rel_diff": 0.25705054413673833
+  },
+  {
+    "name": "transformer_blocks.7.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.034842584282159805,
+    "quant_mean": 0.034842584282159805,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04043133556842804,
+    "quant_mean": 0.04043133556842804,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04100717604160309,
+    "quant_mean": 0.04100717604160309,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.038716573268175125,
+    "quant_mean": 0.038716573268175125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.034867629408836365,
+    "quant_mean": 0.03474482148885727,
+    "max_diff": 0.26708984375,
+    "mean_diff": 0.0071096462197601795,
+    "rel_diff": 0.20390385871543718
+  },
+  {
+    "name": "transformer_blocks.7.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03675941750407219,
+    "quant_mean": 0.036472566425800323,
+    "max_diff": 0.030517578125,
+    "mean_diff": 0.004723530728369951,
+    "rel_diff": 0.1284984845818581
+  },
+  {
+    "name": "transformer_blocks.7.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.042170047760009766,
+    "quant_mean": 0.04191344976425171,
+    "max_diff": 0.0598907470703125,
+    "mean_diff": 0.008543966338038445,
+    "rel_diff": 0.20260741369296303
+  },
+  {
+    "name": "transformer_blocks.7.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.0899658203125,
+    "quant_mean": 1.0899658203125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.130126953125,
+    "quant_mean": 1.130126953125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.33984375,
+    "quant_mean": 1.33984375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.30908203125,
+    "quant_mean": 1.30908203125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039128270000219345,
+    "quant_mean": 0.04029218479990959,
+    "max_diff": 0.67333984375,
+    "mean_diff": 0.012648672796785831,
+    "rel_diff": 0.3232616613026416
+  },
+  {
+    "name": "transformer_blocks.7.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03485414385795593,
+    "quant_mean": 0.03485414385795593,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.040501225739717484,
+    "quant_mean": 0.040501225739717484,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.7.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.012397428043186665,
+    "quant_mean": 0.012327226810157299,
+    "max_diff": 0.02037811279296875,
+    "mean_diff": 0.002792104845866561,
+    "rel_diff": 0.2252162774389532
+  },
+  {
+    "name": "transformer_blocks.7.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03728673234581947,
+    "quant_mean": 0.03682238608598709,
+    "max_diff": 0.185791015625,
+    "mean_diff": 0.011304523795843124,
+    "rel_diff": 0.3031781025812937
+  },
+  {
+    "name": "transformer_blocks.7.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03599262237548828,
+    "quant_mean": 0.0355820469558239,
+    "max_diff": 0.112548828125,
+    "mean_diff": 0.007518617436289787,
+    "rel_diff": 0.2088932356448071
+  },
+  {
+    "name": "transformer_blocks.7.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03940935060381889,
+    "quant_mean": 0.03908902406692505,
+    "max_diff": 0.2027587890625,
+    "mean_diff": 0.00936594232916832,
+    "rel_diff": 0.2376578098620745
+  },
+  {
+    "name": "transformer_blocks.7.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0404304638504982,
+    "quant_mean": 0.040444083511829376,
+    "max_diff": 0.2401123046875,
+    "mean_diff": 0.008957534097135067,
+    "rel_diff": 0.22155402210366842
+  },
+  {
+    "name": "transformer_blocks.8.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005379561800509691,
+    "quant_mean": 0.005379561800509691,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.007642689161002636,
+    "quant_mean": 0.007642689161002636,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3841552734375,
+    "quant_mean": 1.3841552734375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.36083984375,
+    "quant_mean": 1.36083984375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03706054762005806,
+    "quant_mean": 0.03699034824967384,
+    "max_diff": 0.2569580078125,
+    "mean_diff": 0.009461956098675728,
+    "rel_diff": 0.25531067815220054
+  },
+  {
+    "name": "transformer_blocks.8.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03446492180228233,
+    "quant_mean": 0.03446492180228233,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04125266522169113,
+    "quant_mean": 0.04125266522169113,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03966221585869789,
+    "quant_mean": 0.03966221585869789,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03902567923069,
+    "quant_mean": 0.03902567923069,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03621404245495796,
+    "quant_mean": 0.0360378697514534,
+    "max_diff": 0.1761474609375,
+    "mean_diff": 0.007126575335860252,
+    "rel_diff": 0.19679033007212018
+  },
+  {
+    "name": "transformer_blocks.8.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.037912119179964066,
+    "quant_mean": 0.037616267800331116,
+    "max_diff": 0.0440673828125,
+    "mean_diff": 0.004891420714557171,
+    "rel_diff": 0.1290199421757142
+  },
+  {
+    "name": "transformer_blocks.8.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04300754889845848,
+    "quant_mean": 0.042805131524801254,
+    "max_diff": 0.0651702880859375,
+    "mean_diff": 0.009088056161999702,
+    "rel_diff": 0.21131299694215952
+  },
+  {
+    "name": "transformer_blocks.8.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.157470703125,
+    "quant_mean": 1.157470703125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1217041015625,
+    "quant_mean": 1.1217041015625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3173828125,
+    "quant_mean": 1.3173828125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3004150390625,
+    "quant_mean": 1.3004150390625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03708503767848015,
+    "quant_mean": 0.03671223670244217,
+    "max_diff": 0.03973388671875,
+    "mean_diff": 0.0052451565861701965,
+    "rel_diff": 0.14143588628076312
+  },
+  {
+    "name": "transformer_blocks.8.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03450144827365875,
+    "quant_mean": 0.03450144827365875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04134325683116913,
+    "quant_mean": 0.04134325683116913,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.8.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.012826050631701946,
+    "quant_mean": 0.012761034071445465,
+    "max_diff": 0.0230712890625,
+    "mean_diff": 0.0029802920762449503,
+    "rel_diff": 0.23236223200743455
+  },
+  {
+    "name": "transformer_blocks.8.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0372130423784256,
+    "quant_mean": 0.03668754920363426,
+    "max_diff": 0.219970703125,
+    "mean_diff": 0.012213539332151413,
+    "rel_diff": 0.3282057920954707
+  },
+  {
+    "name": "transformer_blocks.8.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0364016629755497,
+    "quant_mean": 0.03601137176156044,
+    "max_diff": 0.20703125,
+    "mean_diff": 0.007723398506641388,
+    "rel_diff": 0.21217152606774545
+  },
+  {
+    "name": "transformer_blocks.8.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039155263453722,
+    "quant_mean": 0.03886139765381813,
+    "max_diff": 0.2462158203125,
+    "mean_diff": 0.009042427875101566,
+    "rel_diff": 0.2309376765249488
+  },
+  {
+    "name": "transformer_blocks.8.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04073126241564751,
+    "quant_mean": 0.040634457021951675,
+    "max_diff": 0.1722412109375,
+    "mean_diff": 0.008781658485531807,
+    "rel_diff": 0.21559990554476774
+  },
+  {
+    "name": "transformer_blocks.9.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005227418150752783,
+    "quant_mean": 0.005227418150752783,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0066939243115484715,
+    "quant_mean": 0.0066939243115484715,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3734130859375,
+    "quant_mean": 1.3734130859375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.284912109375,
+    "quant_mean": 1.284912109375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03923443332314491,
+    "quant_mean": 0.0392315611243248,
+    "max_diff": 0.328887939453125,
+    "mean_diff": 0.008549320511519909,
+    "rel_diff": 0.2179034487912959
+  },
+  {
+    "name": "transformer_blocks.9.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03699878975749016,
+    "quant_mean": 0.03699878975749016,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03694811835885048,
+    "quant_mean": 0.03694811835885048,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03872637450695038,
+    "quant_mean": 0.03872637450695038,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.044353242963552475,
+    "quant_mean": 0.044353242963552475,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03378741443157196,
+    "quant_mean": 0.033618126064538956,
+    "max_diff": 0.12896728515625,
+    "mean_diff": 0.006550708785653114,
+    "rel_diff": 0.19388008692168734
+  },
+  {
+    "name": "transformer_blocks.9.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03766745328903198,
+    "quant_mean": 0.03731245920062065,
+    "max_diff": 0.046630859375,
+    "mean_diff": 0.007561267353594303,
+    "rel_diff": 0.20073736570935993
+  },
+  {
+    "name": "transformer_blocks.9.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04174284636974335,
+    "quant_mean": 0.04140542820096016,
+    "max_diff": 0.05023193359375,
+    "mean_diff": 0.008637030608952045,
+    "rel_diff": 0.20691038803018907
+  },
+  {
+    "name": "transformer_blocks.9.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1844482421875,
+    "quant_mean": 1.1844482421875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.273193359375,
+    "quant_mean": 1.273193359375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3265380859375,
+    "quant_mean": 1.3265380859375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2652587890625,
+    "quant_mean": 1.2652587890625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039200447499752045,
+    "quant_mean": 0.03974137827754021,
+    "max_diff": 0.334716796875,
+    "mean_diff": 0.010406593792140484,
+    "rel_diff": 0.26547123314074356
+  },
+  {
+    "name": "transformer_blocks.9.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03695661947131157,
+    "quant_mean": 0.03695661947131157,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0369843989610672,
+    "quant_mean": 0.0369843989610672,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.9.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.01265052892267704,
+    "quant_mean": 0.012554485350847244,
+    "max_diff": 0.01910400390625,
+    "mean_diff": 0.002604433801025152,
+    "rel_diff": 0.2058753241220822
+  },
+  {
+    "name": "transformer_blocks.9.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03712061792612076,
+    "quant_mean": 0.03660682588815689,
+    "max_diff": 0.2010498046875,
+    "mean_diff": 0.010945224203169346,
+    "rel_diff": 0.2948555780078142
+  },
+  {
+    "name": "transformer_blocks.9.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03581230342388153,
+    "quant_mean": 0.035412754863500595,
+    "max_diff": 0.12725830078125,
+    "mean_diff": 0.00743861822411418,
+    "rel_diff": 0.2077111896142883
+  },
+  {
+    "name": "transformer_blocks.9.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.038672372698783875,
+    "quant_mean": 0.038292475044727325,
+    "max_diff": 0.1795654296875,
+    "mean_diff": 0.009323906153440475,
+    "rel_diff": 0.24109986255730972
+  },
+  {
+    "name": "transformer_blocks.9.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04027329012751579,
+    "quant_mean": 0.040357157588005066,
+    "max_diff": 0.35400390625,
+    "mean_diff": 0.009484014473855495,
+    "rel_diff": 0.23549136633518056
+  },
+  {
+    "name": "transformer_blocks.10.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005058389622718096,
+    "quant_mean": 0.005058389622718096,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006361922714859247,
+    "quant_mean": 0.006361922714859247,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.4136962890625,
+    "quant_mean": 1.4136962890625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3812255859375,
+    "quant_mean": 1.3812255859375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03665052354335785,
+    "quant_mean": 0.03700076788663864,
+    "max_diff": 0.29193115234375,
+    "mean_diff": 0.009924347512423992,
+    "rel_diff": 0.2707831661081664
+  },
+  {
+    "name": "transformer_blocks.10.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035344380885362625,
+    "quant_mean": 0.035344380885362625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04143700376152992,
+    "quant_mean": 0.04143700376152992,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03729386627674103,
+    "quant_mean": 0.03729386627674103,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04040390998125076,
+    "quant_mean": 0.04040390998125076,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03455245494842529,
+    "quant_mean": 0.03437476232647896,
+    "max_diff": 0.2113037109375,
+    "mean_diff": 0.006757048889994621,
+    "rel_diff": 0.19555909831847088
+  },
+  {
+    "name": "transformer_blocks.10.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03794573247432709,
+    "quant_mean": 0.03759082034230232,
+    "max_diff": 0.068359375,
+    "mean_diff": 0.00816474948078394,
+    "rel_diff": 0.21516905318977367
+  },
+  {
+    "name": "transformer_blocks.10.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0424308255314827,
+    "quant_mean": 0.042233940213918686,
+    "max_diff": 0.0693359375,
+    "mean_diff": 0.009597341530025005,
+    "rel_diff": 0.2261878987253032
+  },
+  {
+    "name": "transformer_blocks.10.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1981201171875,
+    "quant_mean": 1.1981201171875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.22216796875,
+    "quant_mean": 1.22216796875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3377685546875,
+    "quant_mean": 1.3377685546875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.31640625,
+    "quant_mean": 1.31640625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036645032465457916,
+    "quant_mean": 0.037337277084589005,
+    "max_diff": 0.482330322265625,
+    "mean_diff": 0.010897330939769745,
+    "rel_diff": 0.2973753120914434
+  },
+  {
+    "name": "transformer_blocks.10.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03533484414219856,
+    "quant_mean": 0.03533484414219856,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04160956293344498,
+    "quant_mean": 0.04160956293344498,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.10.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.012907286174595356,
+    "quant_mean": 0.012804295867681503,
+    "max_diff": 0.02117919921875,
+    "mean_diff": 0.0028319708071649075,
+    "rel_diff": 0.21940852436150826
+  },
+  {
+    "name": "transformer_blocks.10.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036734506487846375,
+    "quant_mean": 0.03621811047196388,
+    "max_diff": 0.2257080078125,
+    "mean_diff": 0.011285046115517616,
+    "rel_diff": 0.3072055166222557
+  },
+  {
+    "name": "transformer_blocks.10.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03527064993977547,
+    "quant_mean": 0.034888673573732376,
+    "max_diff": 0.108642578125,
+    "mean_diff": 0.007207201793789864,
+    "rel_diff": 0.20433986225650827
+  },
+  {
+    "name": "transformer_blocks.10.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03796500340104103,
+    "quant_mean": 0.03753731772303581,
+    "max_diff": 0.12933349609375,
+    "mean_diff": 0.008825867436826229,
+    "rel_diff": 0.23247370792668326
+  },
+  {
+    "name": "transformer_blocks.10.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03991113603115082,
+    "quant_mean": 0.03975166752934456,
+    "max_diff": 0.1763916015625,
+    "mean_diff": 0.0085134981200099,
+    "rel_diff": 0.21331129187232753
+  },
+  {
+    "name": "transformer_blocks.11.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0047499630600214005,
+    "quant_mean": 0.0047499630600214005,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006019481457769871,
+    "quant_mean": 0.006019481457769871,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.4185791015625,
+    "quant_mean": 1.4185791015625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3839111328125,
+    "quant_mean": 1.3839111328125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03575969114899635,
+    "quant_mean": 0.03586415946483612,
+    "max_diff": 0.38671875,
+    "mean_diff": 0.008764226920902729,
+    "rel_diff": 0.24508669366071337
+  },
+  {
+    "name": "transformer_blocks.11.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03477557748556137,
+    "quant_mean": 0.03477557748556137,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.041223447769880295,
+    "quant_mean": 0.041223447769880295,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03706606104969978,
+    "quant_mean": 0.03706606104969978,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04017407447099686,
+    "quant_mean": 0.04017407447099686,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.032750774174928665,
+    "quant_mean": 0.03260169178247452,
+    "max_diff": 0.25927734375,
+    "mean_diff": 0.006518512964248657,
+    "rel_diff": 0.19903379807432825
+  },
+  {
+    "name": "transformer_blocks.11.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03783826157450676,
+    "quant_mean": 0.03753456473350525,
+    "max_diff": 0.05908203125,
+    "mean_diff": 0.008202586323022842,
+    "rel_diff": 0.21678015357734445
+  },
+  {
+    "name": "transformer_blocks.11.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04220329225063324,
+    "quant_mean": 0.04195449873805046,
+    "max_diff": 0.0771484375,
+    "mean_diff": 0.009972888976335526,
+    "rel_diff": 0.2363058918259385
+  },
+  {
+    "name": "transformer_blocks.11.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2147216796875,
+    "quant_mean": 1.2147216796875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2335205078125,
+    "quant_mean": 1.2335205078125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.340087890625,
+    "quant_mean": 1.340087890625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3182373046875,
+    "quant_mean": 1.3182373046875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035722531378269196,
+    "quant_mean": 0.03897310048341751,
+    "max_diff": 1.185791015625,
+    "mean_diff": 0.016671504825353622,
+    "rel_diff": 0.46669425472330095
+  },
+  {
+    "name": "transformer_blocks.11.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03471972048282623,
+    "quant_mean": 0.03471972048282623,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0413171648979187,
+    "quant_mean": 0.0413171648979187,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.11.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.012777949683368206,
+    "quant_mean": 0.012680805288255215,
+    "max_diff": 0.01239013671875,
+    "mean_diff": 0.0016237417003139853,
+    "rel_diff": 0.12707362838430675
+  },
+  {
+    "name": "transformer_blocks.11.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0365184061229229,
+    "quant_mean": 0.036055345088243484,
+    "max_diff": 0.190673828125,
+    "mean_diff": 0.011107761412858963,
+    "rel_diff": 0.3041687617411899
+  },
+  {
+    "name": "transformer_blocks.11.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03520793840289116,
+    "quant_mean": 0.03487583249807358,
+    "max_diff": 0.1429443359375,
+    "mean_diff": 0.007386140525341034,
+    "rel_diff": 0.20978616648774992
+  },
+  {
+    "name": "transformer_blocks.11.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0373215489089489,
+    "quant_mean": 0.03682456165552139,
+    "max_diff": 0.1158447265625,
+    "mean_diff": 0.008932984434068203,
+    "rel_diff": 0.2393518570824293
+  },
+  {
+    "name": "transformer_blocks.11.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0404244139790535,
+    "quant_mean": 0.04024623706936836,
+    "max_diff": 0.2232666015625,
+    "mean_diff": 0.008921717293560505,
+    "rel_diff": 0.22070116071866408
+  },
+  {
+    "name": "transformer_blocks.12.norm1.linear.weight",
+    "shape": [
+      13824,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.004802193026989698,
+    "quant_mean": 0.004802193026989698,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0057414318434894085,
+    "quant_mean": 0.0057414318434894085,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.552490234375,
+    "quant_mean": 1.552490234375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.49462890625,
+    "quant_mean": 1.49462890625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.032729074358940125,
+    "quant_mean": 0.033907968550920486,
+    "max_diff": 0.325927734375,
+    "mean_diff": 0.011669290252029896,
+    "rel_diff": 0.35654191006545427
+  },
+  {
+    "name": "transformer_blocks.12.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03198479115962982,
+    "quant_mean": 0.03198479115962982,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04516085982322693,
+    "quant_mean": 0.04516085982322693,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03648323193192482,
+    "quant_mean": 0.03648323193192482,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03695894405245781,
+    "quant_mean": 0.03695894405245781,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.033844903111457825,
+    "quant_mean": 0.033642854541540146,
+    "max_diff": 0.274169921875,
+    "mean_diff": 0.0070588961243629456,
+    "rel_diff": 0.2085659402084041
+  },
+  {
+    "name": "transformer_blocks.12.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03839358314871788,
+    "quant_mean": 0.03803160414099693,
+    "max_diff": 0.10662841796875,
+    "mean_diff": 0.009282837621867657,
+    "rel_diff": 0.24178090302490088
+  },
+  {
+    "name": "transformer_blocks.12.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04313106834888458,
+    "quant_mean": 0.04290623962879181,
+    "max_diff": 0.1044921875,
+    "mean_diff": 0.011162604205310345,
+    "rel_diff": 0.25880651800580406
+  },
+  {
+    "name": "transformer_blocks.12.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2333984375,
+    "quant_mean": 1.2333984375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.277099609375,
+    "quant_mean": 1.277099609375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn2.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.422607421875,
+    "quant_mean": 1.422607421875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn2.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.4013671875,
+    "quant_mean": 1.4013671875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn2.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03279723599553108,
+    "quant_mean": 0.03464767336845398,
+    "max_diff": 0.65576171875,
+    "mean_diff": 0.012865779921412468,
+    "rel_diff": 0.3922823252649184
+  },
+  {
+    "name": "transformer_blocks.12.attn2.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.032053008675575256,
+    "quant_mean": 0.032053008675575256,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn2.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04546435549855232,
+    "quant_mean": 0.04546435549855232,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.12.attn2.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.013254831545054913,
+    "quant_mean": 0.0131959468126297,
+    "max_diff": 0.0467529296875,
+    "mean_diff": 0.0034278365783393383,
+    "rel_diff": 0.2586101513690436
+  },
+  {
+    "name": "transformer_blocks.12.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03647712618112564,
+    "quant_mean": 0.03609297797083855,
+    "max_diff": 0.06298828125,
+    "mean_diff": 0.005196346901357174,
+    "rel_diff": 0.1424549031358969
+  },
+  {
+    "name": "transformer_blocks.12.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03563780337572098,
+    "quant_mean": 0.0353366918861866,
+    "max_diff": 0.232421875,
+    "mean_diff": 0.007858218625187874,
+    "rel_diff": 0.22050226657681116
+  },
+  {
+    "name": "transformer_blocks.12.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03647766262292862,
+    "quant_mean": 0.03600688278675079,
+    "max_diff": 0.1112060546875,
+    "mean_diff": 0.008682417683303356,
+    "rel_diff": 0.2380200560779715
+  },
+  {
+    "name": "transformer_blocks.12.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04008542001247406,
+    "quant_mean": 0.039806999266147614,
+    "max_diff": 0.124755859375,
+    "mean_diff": 0.008071507327258587,
+    "rel_diff": 0.20135763355281056
+  },
+  {
+    "name": "transformer_blocks.13.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.00614992156624794,
+    "quant_mean": 0.00614992156624794,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005724702496081591,
+    "quant_mean": 0.005724702496081591,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3519287109375,
+    "quant_mean": 1.3519287109375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3223876953125,
+    "quant_mean": 1.3223876953125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035072583705186844,
+    "quant_mean": 0.035205449908971786,
+    "max_diff": 0.4443359375,
+    "mean_diff": 0.008940234780311584,
+    "rel_diff": 0.25490657621336466
+  },
+  {
+    "name": "transformer_blocks.13.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.034565865993499756,
+    "quant_mean": 0.034565865993499756,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.041078850626945496,
+    "quant_mean": 0.041078850626945496,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03449750691652298,
+    "quant_mean": 0.03449750691652298,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04160905256867409,
+    "quant_mean": 0.04160905256867409,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03178740292787552,
+    "quant_mean": 0.03158324211835861,
+    "max_diff": 0.1426544189453125,
+    "mean_diff": 0.0061154491268098354,
+    "rel_diff": 0.19238587112092342
+  },
+  {
+    "name": "transformer_blocks.13.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03772607073187828,
+    "quant_mean": 0.03742962330579758,
+    "max_diff": 0.06103515625,
+    "mean_diff": 0.008283077739179134,
+    "rel_diff": 0.21955839510728686
+  },
+  {
+    "name": "transformer_blocks.13.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04331718012690544,
+    "quant_mean": 0.04293956980109215,
+    "max_diff": 0.0673828125,
+    "mean_diff": 0.009699733927845955,
+    "rel_diff": 0.22392343315503274
+  },
+  {
+    "name": "transformer_blocks.13.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2359619140625,
+    "quant_mean": 1.2359619140625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2034912109375,
+    "quant_mean": 1.2034912109375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.13.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036267247051000595,
+    "quant_mean": 0.03589792549610138,
+    "max_diff": 0.14971923828125,
+    "mean_diff": 0.010714184492826462,
+    "rel_diff": 0.2954230720498026
+  },
+  {
+    "name": "transformer_blocks.13.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03520550951361656,
+    "quant_mean": 0.03488076105713844,
+    "max_diff": 0.12054443359375,
+    "mean_diff": 0.007665005978196859,
+    "rel_diff": 0.21772171193872705
+  },
+  {
+    "name": "transformer_blocks.13.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03573355823755264,
+    "quant_mean": 0.034994397312402725,
+    "max_diff": 0.09161376953125,
+    "mean_diff": 0.010631149634718895,
+    "rel_diff": 0.297511560111888
+  },
+  {
+    "name": "transformer_blocks.13.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039748355746269226,
+    "quant_mean": 0.039458341896533966,
+    "max_diff": 0.31787109375,
+    "mean_diff": 0.008235130459070206,
+    "rel_diff": 0.20718161122996995
+  },
+  {
+    "name": "transformer_blocks.14.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006107029505074024,
+    "quant_mean": 0.006107029505074024,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0049562701024115086,
+    "quant_mean": 0.0049562701024115086,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.424072265625,
+    "quant_mean": 1.424072265625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.38720703125,
+    "quant_mean": 1.38720703125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03427072614431381,
+    "quant_mean": 0.03443014249205589,
+    "max_diff": 0.3369140625,
+    "mean_diff": 0.010821426287293434,
+    "rel_diff": 0.31576287832640915
+  },
+  {
+    "name": "transformer_blocks.14.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.032931745052337646,
+    "quant_mean": 0.032931745052337646,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04173184186220169,
+    "quant_mean": 0.04173184186220169,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036108456552028656,
+    "quant_mean": 0.036108456552028656,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03903431445360184,
+    "quant_mean": 0.03903431445360184,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03165503218770027,
+    "quant_mean": 0.03145686909556389,
+    "max_diff": 0.171478271484375,
+    "mean_diff": 0.006151307839900255,
+    "rel_diff": 0.1943231603807616
+  },
+  {
+    "name": "transformer_blocks.14.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03627769649028778,
+    "quant_mean": 0.03598814457654953,
+    "max_diff": 0.044921875,
+    "mean_diff": 0.0047063385136425495,
+    "rel_diff": 0.12973087245475465
+  },
+  {
+    "name": "transformer_blocks.14.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04437742382287979,
+    "quant_mean": 0.043944451957941055,
+    "max_diff": 0.0953369140625,
+    "mean_diff": 0.010986127890646458,
+    "rel_diff": 0.24756113511417846
+  },
+  {
+    "name": "transformer_blocks.14.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.28955078125,
+    "quant_mean": 1.28955078125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2540283203125,
+    "quant_mean": 1.2540283203125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.14.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036067306995391846,
+    "quant_mean": 0.035848602652549744,
+    "max_diff": 0.22412109375,
+    "mean_diff": 0.010985150001943111,
+    "rel_diff": 0.30457352853129144
+  },
+  {
+    "name": "transformer_blocks.14.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03470732644200325,
+    "quant_mean": 0.03437034785747528,
+    "max_diff": 0.1126708984375,
+    "mean_diff": 0.007655960973352194,
+    "rel_diff": 0.22058624366480784
+  },
+  {
+    "name": "transformer_blocks.14.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03435370326042175,
+    "quant_mean": 0.0339491181075573,
+    "max_diff": 0.157958984375,
+    "mean_diff": 0.009917303919792175,
+    "rel_diff": 0.2886821533559724
+  },
+  {
+    "name": "transformer_blocks.14.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.034324873238801956,
+    "quant_mean": 0.033767808228731155,
+    "max_diff": 0.1513671875,
+    "mean_diff": 0.008048562332987785,
+    "rel_diff": 0.23448185612149236
+  },
+  {
+    "name": "transformer_blocks.15.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.00557034881785512,
+    "quant_mean": 0.00557034881785512,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.002995177172124386,
+    "quant_mean": 0.002995177172124386,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.41552734375,
+    "quant_mean": 1.41552734375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3948974609375,
+    "quant_mean": 1.3948974609375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03510569781064987,
+    "quant_mean": 0.03541051968932152,
+    "max_diff": 0.261962890625,
+    "mean_diff": 0.009335091337561607,
+    "rel_diff": 0.26591377641244024
+  },
+  {
+    "name": "transformer_blocks.15.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03333420306444168,
+    "quant_mean": 0.03333420306444168,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04202800616621971,
+    "quant_mean": 0.04202800616621971,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.034157153218984604,
+    "quant_mean": 0.034157153218984604,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.037822138518095016,
+    "quant_mean": 0.037822138518095016,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03086250089108944,
+    "quant_mean": 0.03070073388516903,
+    "max_diff": 0.16119384765625,
+    "mean_diff": 0.005954643711447716,
+    "rel_diff": 0.19294099992256067
+  },
+  {
+    "name": "transformer_blocks.15.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03753579780459404,
+    "quant_mean": 0.03730322793126106,
+    "max_diff": 0.09326171875,
+    "mean_diff": 0.008370954543352127,
+    "rel_diff": 0.2230125054702459
+  },
+  {
+    "name": "transformer_blocks.15.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0427648089826107,
+    "quant_mean": 0.04251600429415703,
+    "max_diff": 0.0669403076171875,
+    "mean_diff": 0.009098958224058151,
+    "rel_diff": 0.21276737375547003
+  },
+  {
+    "name": "transformer_blocks.15.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.20703125,
+    "quant_mean": 1.20703125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.2373046875,
+    "quant_mean": 1.2373046875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.15.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035816628485918045,
+    "quant_mean": 0.03549645468592644,
+    "max_diff": 0.074951171875,
+    "mean_diff": 0.004894208628684282,
+    "rel_diff": 0.13664623023203387
+  },
+  {
+    "name": "transformer_blocks.15.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03396855294704437,
+    "quant_mean": 0.03363931551575661,
+    "max_diff": 0.1085205078125,
+    "mean_diff": 0.007269071415066719,
+    "rel_diff": 0.21399408112727375
+  },
+  {
+    "name": "transformer_blocks.15.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.013468515127897263,
+    "quant_mean": 0.014831696636974812,
+    "max_diff": 0.236236572265625,
+    "mean_diff": 0.007083466276526451,
+    "rel_diff": 0.5259273906579806
+  },
+  {
+    "name": "transformer_blocks.15.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.008450893685221672,
+    "quant_mean": 0.007978919893503189,
+    "max_diff": 0.21539306640625,
+    "mean_diff": 0.009496541693806648,
+    "rel_diff": 1.1237309106259858
+  },
+  {
+    "name": "transformer_blocks.16.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0055654291063547134,
+    "quant_mean": 0.0055654291063547134,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0044542099349200726,
+    "quant_mean": 0.0044542099349200726,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.421142578125,
+    "quant_mean": 1.421142578125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.44921875,
+    "quant_mean": 1.44921875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.033421773463487625,
+    "quant_mean": 0.03406328335404396,
+    "max_diff": 0.33837890625,
+    "mean_diff": 0.01056460477411747,
+    "rel_diff": 0.3160993723048624
+  },
+  {
+    "name": "transformer_blocks.16.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03172821179032326,
+    "quant_mean": 0.03172821179032326,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.043497711420059204,
+    "quant_mean": 0.043497711420059204,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.034518107771873474,
+    "quant_mean": 0.034518107771873474,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03349372372031212,
+    "quant_mean": 0.03349372372031212,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.030698759481310844,
+    "quant_mean": 0.03055446408689022,
+    "max_diff": 0.174072265625,
+    "mean_diff": 0.006083404645323753,
+    "rel_diff": 0.19816444594065177
+  },
+  {
+    "name": "transformer_blocks.16.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0371311716735363,
+    "quant_mean": 0.036876216530799866,
+    "max_diff": 0.0665283203125,
+    "mean_diff": 0.008375728502869606,
+    "rel_diff": 0.22557128874891305
+  },
+  {
+    "name": "transformer_blocks.16.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.041106801480054855,
+    "quant_mean": 0.040596697479486465,
+    "max_diff": 0.08203125,
+    "mean_diff": 0.011218688450753689,
+    "rel_diff": 0.27291555941275153
+  },
+  {
+    "name": "transformer_blocks.16.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.174560546875,
+    "quant_mean": 1.174560546875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1728515625,
+    "quant_mean": 1.1728515625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.16.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0353105328977108,
+    "quant_mean": 0.035166554152965546,
+    "max_diff": 0.1751708984375,
+    "mean_diff": 0.010331538505852222,
+    "rel_diff": 0.2925907578306314
+  },
+  {
+    "name": "transformer_blocks.16.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03333133086562157,
+    "quant_mean": 0.03302745521068573,
+    "max_diff": 0.12841796875,
+    "mean_diff": 0.006993370596319437,
+    "rel_diff": 0.20981365929783224
+  },
+  {
+    "name": "transformer_blocks.16.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03287100791931152,
+    "quant_mean": 0.03248642012476921,
+    "max_diff": 0.08367919921875,
+    "mean_diff": 0.007914600893855095,
+    "rel_diff": 0.24077748104068644
+  },
+  {
+    "name": "transformer_blocks.16.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03761419281363487,
+    "quant_mean": 0.03724358230829239,
+    "max_diff": 0.1875,
+    "mean_diff": 0.007507762871682644,
+    "rel_diff": 0.1995991489938246
+  },
+  {
+    "name": "transformer_blocks.17.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005874194670468569,
+    "quant_mean": 0.005874194670468569,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.003145702416077256,
+    "quant_mean": 0.003145702416077256,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.4708251953125,
+    "quant_mean": 1.4708251953125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.4866943359375,
+    "quant_mean": 1.4866943359375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03166607767343521,
+    "quant_mean": 0.0313207246363163,
+    "max_diff": 0.0526123046875,
+    "mean_diff": 0.004633823409676552,
+    "rel_diff": 0.14633394113804218
+  },
+  {
+    "name": "transformer_blocks.17.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.031551819294691086,
+    "quant_mean": 0.031551819294691086,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04267358407378197,
+    "quant_mean": 0.04267358407378197,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03287272900342941,
+    "quant_mean": 0.03287272900342941,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03243952989578247,
+    "quant_mean": 0.03243952989578247,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.028892334550619125,
+    "quant_mean": 0.028740935027599335,
+    "max_diff": 0.173583984375,
+    "mean_diff": 0.005986364092677832,
+    "rel_diff": 0.20719551098353323
+  },
+  {
+    "name": "transformer_blocks.17.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03738461807370186,
+    "quant_mean": 0.03709243983030319,
+    "max_diff": 0.0390625,
+    "mean_diff": 0.004835777450352907,
+    "rel_diff": 0.12935202781259245
+  },
+  {
+    "name": "transformer_blocks.17.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03760993108153343,
+    "quant_mean": 0.03738206624984741,
+    "max_diff": 0.071929931640625,
+    "mean_diff": 0.008487493731081486,
+    "rel_diff": 0.22567155084560514
+  },
+  {
+    "name": "transformer_blocks.17.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1785888671875,
+    "quant_mean": 1.1785888671875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.18701171875,
+    "quant_mean": 1.18701171875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.17.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03465332090854645,
+    "quant_mean": 0.03442363068461418,
+    "max_diff": 0.14483642578125,
+    "mean_diff": 0.010199793614447117,
+    "rel_diff": 0.2943380433288037
+  },
+  {
+    "name": "transformer_blocks.17.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.033377550542354584,
+    "quant_mean": 0.03309057652950287,
+    "max_diff": 0.10372161865234375,
+    "mean_diff": 0.006939663086086512,
+    "rel_diff": 0.20791402886620186
+  },
+  {
+    "name": "transformer_blocks.17.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02193940244615078,
+    "quant_mean": 0.021899299696087837,
+    "max_diff": 0.1300048828125,
+    "mean_diff": 0.00495331734418869,
+    "rel_diff": 0.22577256142781243
+  },
+  {
+    "name": "transformer_blocks.17.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.016734717413783073,
+    "quant_mean": 0.015373196452856064,
+    "max_diff": 0.07073974609375,
+    "mean_diff": 0.007385272067040205,
+    "rel_diff": 0.4413141537613298
+  },
+  {
+    "name": "transformer_blocks.18.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.005570967216044664,
+    "quant_mean": 0.005570967216044664,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.002633571159094572,
+    "quant_mean": 0.002633571159094572,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.39697265625,
+    "quant_mean": 1.39697265625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.391357421875,
+    "quant_mean": 1.391357421875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.033608075231313705,
+    "quant_mean": 0.03409866243600845,
+    "max_diff": 0.196533203125,
+    "mean_diff": 0.010178654454648495,
+    "rel_diff": 0.30286326592521023
+  },
+  {
+    "name": "transformer_blocks.18.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.031575512140989304,
+    "quant_mean": 0.031575512140989304,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039260052144527435,
+    "quant_mean": 0.039260052144527435,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03223361447453499,
+    "quant_mean": 0.03223361447453499,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03639877215027809,
+    "quant_mean": 0.03639877215027809,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03106730245053768,
+    "quant_mean": 0.03088480234146118,
+    "max_diff": 0.109405517578125,
+    "mean_diff": 0.006084807682782412,
+    "rel_diff": 0.1958588369196738
+  },
+  {
+    "name": "transformer_blocks.18.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03637637197971344,
+    "quant_mean": 0.036315225064754486,
+    "max_diff": 0.0637054443359375,
+    "mean_diff": 0.00863689836114645,
+    "rel_diff": 0.23743148414163667
+  },
+  {
+    "name": "transformer_blocks.18.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.037924379110336304,
+    "quant_mean": 0.037644002586603165,
+    "max_diff": 0.05279541015625,
+    "mean_diff": 0.007716501597315073,
+    "rel_diff": 0.20347068939897406
+  },
+  {
+    "name": "transformer_blocks.18.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1385498046875,
+    "quant_mean": 1.1385498046875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.23046875,
+    "quant_mean": 1.23046875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.18.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03418485075235367,
+    "quant_mean": 0.033987775444984436,
+    "max_diff": 0.2083740234375,
+    "mean_diff": 0.00982159748673439,
+    "rel_diff": 0.28730839531233604
+  },
+  {
+    "name": "transformer_blocks.18.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03244698420166969,
+    "quant_mean": 0.03217580169439316,
+    "max_diff": 0.083831787109375,
+    "mean_diff": 0.0066811577416956425,
+    "rel_diff": 0.20590991264614075
+  },
+  {
+    "name": "transformer_blocks.18.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.011536985635757446,
+    "quant_mean": 0.012025473639369011,
+    "max_diff": 0.160552978515625,
+    "mean_diff": 0.0043793367221951485,
+    "rel_diff": 0.37959074099169743
+  },
+  {
+    "name": "transformer_blocks.18.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.00911465659737587,
+    "quant_mean": 0.008527658879756927,
+    "max_diff": 0.11480712890625,
+    "mean_diff": 0.005763276480138302,
+    "rel_diff": 0.632307986097655
+  },
+  {
+    "name": "transformer_blocks.19.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.00613584415987134,
+    "quant_mean": 0.00613584415987134,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0034588982816785574,
+    "quant_mean": 0.0034588982816785574,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.4483642578125,
+    "quant_mean": 1.4483642578125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3551025390625,
+    "quant_mean": 1.3551025390625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.031063970178365707,
+    "quant_mean": 0.03213827311992645,
+    "max_diff": 0.1903076171875,
+    "mean_diff": 0.011216875165700912,
+    "rel_diff": 0.3610894386776884
+  },
+  {
+    "name": "transformer_blocks.19.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02936052903532982,
+    "quant_mean": 0.02936052903532982,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.04250449314713478,
+    "quant_mean": 0.04250449314713478,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035216137766838074,
+    "quant_mean": 0.035216137766838074,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03236488997936249,
+    "quant_mean": 0.03236488997936249,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.028079764917492867,
+    "quant_mean": 0.027948793023824692,
+    "max_diff": 0.210693359375,
+    "mean_diff": 0.005778186023235321,
+    "rel_diff": 0.2057775049911701
+  },
+  {
+    "name": "transformer_blocks.19.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03764539957046509,
+    "quant_mean": 0.037352047860622406,
+    "max_diff": 0.064453125,
+    "mean_diff": 0.0048886556178331375,
+    "rel_diff": 0.12986060381897288
+  },
+  {
+    "name": "transformer_blocks.19.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.039493173360824585,
+    "quant_mean": 0.03902668505907059,
+    "max_diff": 0.0777587890625,
+    "mean_diff": 0.010014030151069164,
+    "rel_diff": 0.25356350891183466
+  },
+  {
+    "name": "transformer_blocks.19.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.155029296875,
+    "quant_mean": 1.155029296875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.158935546875,
+    "quant_mean": 1.158935546875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.19.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03388223797082901,
+    "quant_mean": 0.033597733825445175,
+    "max_diff": 0.1324462890625,
+    "mean_diff": 0.009942863136529922,
+    "rel_diff": 0.29345346699222113
+  },
+  {
+    "name": "transformer_blocks.19.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03214173763990402,
+    "quant_mean": 0.03187734633684158,
+    "max_diff": 0.124755859375,
+    "mean_diff": 0.006825760938227177,
+    "rel_diff": 0.21236433733158258
+  },
+  {
+    "name": "transformer_blocks.19.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.024532660841941833,
+    "quant_mean": 0.024401860311627388,
+    "max_diff": 0.1171875,
+    "mean_diff": 0.005633056163787842,
+    "rel_diff": 0.22961446799169496
+  },
+  {
+    "name": "transformer_blocks.19.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.020526021718978882,
+    "quant_mean": 0.019419757649302483,
+    "max_diff": 0.1806640625,
+    "mean_diff": 0.00762242591008544,
+    "rel_diff": 0.3713540938864259
+  },
+  {
+    "name": "transformer_blocks.20.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006240919232368469,
+    "quant_mean": 0.006240919232368469,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0024820987600833178,
+    "quant_mean": 0.0024820987600833178,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.5166015625,
+    "quant_mean": 1.5166015625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.484130859375,
+    "quant_mean": 1.484130859375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.033197302371263504,
+    "quant_mean": 0.03396567702293396,
+    "max_diff": 0.213714599609375,
+    "mean_diff": 0.010716316290199757,
+    "rel_diff": 0.322806743219252
+  },
+  {
+    "name": "transformer_blocks.20.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03157145902514458,
+    "quant_mean": 0.03157145902514458,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03945548087358475,
+    "quant_mean": 0.03945548087358475,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.031705860048532486,
+    "quant_mean": 0.031705860048532486,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03435732051730156,
+    "quant_mean": 0.03435732051730156,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03052023984491825,
+    "quant_mean": 0.030407391488552094,
+    "max_diff": 0.24310302734375,
+    "mean_diff": 0.006428494583815336,
+    "rel_diff": 0.21063047047387481
+  },
+  {
+    "name": "transformer_blocks.20.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.036528363823890686,
+    "quant_mean": 0.03632257506251335,
+    "max_diff": 0.09649658203125,
+    "mean_diff": 0.008779358118772507,
+    "rel_diff": 0.24034352476513846
+  },
+  {
+    "name": "transformer_blocks.20.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.029420362785458565,
+    "quant_mean": 0.029202312231063843,
+    "max_diff": 0.06805419921875,
+    "mean_diff": 0.007307380437850952,
+    "rel_diff": 0.24837824085841387
+  },
+  {
+    "name": "transformer_blocks.20.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.1544189453125,
+    "quant_mean": 1.1544189453125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.36328125,
+    "quant_mean": 1.36328125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.20.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03367242217063904,
+    "quant_mean": 0.03338344395160675,
+    "max_diff": 0.03564453125,
+    "mean_diff": 0.004551493562757969,
+    "rel_diff": 0.1351697299349431
+  },
+  {
+    "name": "transformer_blocks.20.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03264263644814491,
+    "quant_mean": 0.032386165112257004,
+    "max_diff": 0.09326171875,
+    "mean_diff": 0.006981257814913988,
+    "rel_diff": 0.21386923471429303
+  },
+  {
+    "name": "transformer_blocks.20.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.009764354676008224,
+    "quant_mean": 0.018610486760735512,
+    "max_diff": 0.5695953369140625,
+    "mean_diff": 0.015163630247116089,
+    "rel_diff": 1.5529561574419957
+  },
+  {
+    "name": "transformer_blocks.20.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.009824570268392563,
+    "quant_mean": 0.009763866662979126,
+    "max_diff": 0.03173828125,
+    "mean_diff": 0.0010967017151415348,
+    "rel_diff": 0.11162835308800122
+  },
+  {
+    "name": "transformer_blocks.21.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006421873811632395,
+    "quant_mean": 0.006421873811632395,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0021566259674727917,
+    "quant_mean": 0.0021566259674727917,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.462646484375,
+    "quant_mean": 1.462646484375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3868408203125,
+    "quant_mean": 1.3868408203125,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.031185558065772057,
+    "quant_mean": 0.03187943994998932,
+    "max_diff": 0.12066650390625,
+    "mean_diff": 0.009960604831576347,
+    "rel_diff": 0.31939789618611053
+  },
+  {
+    "name": "transformer_blocks.21.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.028921345248818398,
+    "quant_mean": 0.028921345248818398,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.040398746728897095,
+    "quant_mean": 0.040398746728897095,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03266194462776184,
+    "quant_mean": 0.03266194462776184,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03171699866652489,
+    "quant_mean": 0.03171699866652489,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02635050192475319,
+    "quant_mean": 0.026227999478578568,
+    "max_diff": 0.162841796875,
+    "mean_diff": 0.005581490695476532,
+    "rel_diff": 0.21181716360635033
+  },
+  {
+    "name": "transformer_blocks.21.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.038238998502492905,
+    "quant_mean": 0.03817404434084892,
+    "max_diff": 0.082763671875,
+    "mean_diff": 0.009039167314767838,
+    "rel_diff": 0.23638602748234305
+  },
+  {
+    "name": "transformer_blocks.21.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.021131696179509163,
+    "quant_mean": 0.020813358947634697,
+    "max_diff": 0.058868408203125,
+    "mean_diff": 0.006636373698711395,
+    "rel_diff": 0.31404817208496416
+  },
+  {
+    "name": "transformer_blocks.21.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.07958984375,
+    "quant_mean": 1.07958984375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3092041015625,
+    "quant_mean": 1.3092041015625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.21.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.033376868814229965,
+    "quant_mean": 0.0330938845872879,
+    "max_diff": 0.03369140625,
+    "mean_diff": 0.0044700270518660545,
+    "rel_diff": 0.13392585558240677
+  },
+  {
+    "name": "transformer_blocks.21.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.032442767173051834,
+    "quant_mean": 0.03216236084699631,
+    "max_diff": 0.14031982421875,
+    "mean_diff": 0.007154283579438925,
+    "rel_diff": 0.22052007265831533
+  },
+  {
+    "name": "transformer_blocks.21.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.009028825908899307,
+    "quant_mean": 0.03024374507367611,
+    "max_diff": 0.95086669921875,
+    "mean_diff": 0.027454759925603867,
+    "rel_diff": 3.0407862323140655
+  },
+  {
+    "name": "transformer_blocks.21.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.008841980248689651,
+    "quant_mean": 0.008807901293039322,
+    "max_diff": 0.0184326171875,
+    "mean_diff": 0.0008298219763673842,
+    "rel_diff": 0.09385013475787994
+  },
+  {
+    "name": "transformer_blocks.22.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.006155505310744047,
+    "quant_mean": 0.006155505310744047,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.norm1_context.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.001965994480997324,
+    "quant_mean": 0.001965994480997324,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.572998046875,
+    "quant_mean": 1.572998046875,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.48193359375,
+    "quant_mean": 1.48193359375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.028605351224541664,
+    "quant_mean": 0.02945016510784626,
+    "max_diff": 0.121826171875,
+    "mean_diff": 0.010179385542869568,
+    "rel_diff": 0.3558558643243516
+  },
+  {
+    "name": "transformer_blocks.22.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.025035932660102844,
+    "quant_mean": 0.025035932660102844,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03605424240231514,
+    "quant_mean": 0.03605424240231514,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.030229423195123672,
+    "quant_mean": 0.030229423195123672,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02809659019112587,
+    "quant_mean": 0.02809659019112587,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.021221578121185303,
+    "quant_mean": 0.021114567294716835,
+    "max_diff": 0.2205810546875,
+    "mean_diff": 0.004667849745601416,
+    "rel_diff": 0.21995760726981345
+  },
+  {
+    "name": "transformer_blocks.22.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.038595881313085556,
+    "quant_mean": 0.03827172517776489,
+    "max_diff": 0.05780029296875,
+    "mean_diff": 0.005123035050928593,
+    "rel_diff": 0.1327352440022982
+  },
+  {
+    "name": "transformer_blocks.22.attn.to_add_out.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.01592140644788742,
+    "quant_mean": 0.015611610375344753,
+    "max_diff": 0.070556640625,
+    "mean_diff": 0.006712844595313072,
+    "rel_diff": 0.42162357961585667
+  },
+  {
+    "name": "transformer_blocks.22.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.0003662109375,
+    "quant_mean": 1.0003662109375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.29833984375,
+    "quant_mean": 1.29833984375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.22.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03237553685903549,
+    "quant_mean": 0.032186493277549744,
+    "max_diff": 0.10736083984375,
+    "mean_diff": 0.008788876235485077,
+    "rel_diff": 0.2714664951839182
+  },
+  {
+    "name": "transformer_blocks.22.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03301510959863663,
+    "quant_mean": 0.032725658267736435,
+    "max_diff": 0.1593017578125,
+    "mean_diff": 0.006979638710618019,
+    "rel_diff": 0.21140734292255134
+  },
+  {
+    "name": "transformer_blocks.22.ff_context.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.009449313394725323,
+    "quant_mean": 0.022723553702235222,
+    "max_diff": 0.60107421875,
+    "mean_diff": 0.01854560151696205,
+    "rel_diff": 1.962638036847626
+  },
+  {
+    "name": "transformer_blocks.22.ff_context.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.008844686672091484,
+    "quant_mean": 0.008809280581772327,
+    "max_diff": 0.0263671875,
+    "mean_diff": 0.0008229282102547586,
+    "rel_diff": 0.09304199349780107
+  },
+  {
+    "name": "transformer_blocks.23.norm1.linear.weight",
+    "shape": [
+      9216,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0053875320591032505,
+    "quant_mean": 0.0053875320591032505,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.norm1_context.linear.weight",
+    "shape": [
+      3072,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.0030631376430392265,
+    "quant_mean": 0.0030631376430392265,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.attn.norm_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3990478515625,
+    "quant_mean": 1.3990478515625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.attn.norm_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.3043212890625,
+    "quant_mean": 1.3043212890625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.attn.to_q.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.027695156633853912,
+    "quant_mean": 0.028045229613780975,
+    "max_diff": 0.1136474609375,
+    "mean_diff": 0.007954276166856289,
+    "rel_diff": 0.28720809923321317
+  },
+  {
+    "name": "transformer_blocks.23.attn.to_k.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.023108674213290215,
+    "quant_mean": 0.023108674213290215,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.attn.to_v.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03234056010842323,
+    "quant_mean": 0.03234056010842323,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.attn.add_k_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02872246503829956,
+    "quant_mean": 0.02872246503829956,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.attn.add_v_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.02489355579018593,
+    "quant_mean": 0.02489355579018593,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.attn.add_q_proj.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.009009692817926407,
+    "quant_mean": 0.008996265009045601,
+    "max_diff": 0.012273788452148438,
+    "mean_diff": 0.000803483824711293,
+    "rel_diff": 0.08917983655494374
+  },
+  {
+    "name": "transformer_blocks.23.attn.to_out.0.weight",
+    "shape": [
+      1536,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.035371214151382446,
+    "quant_mean": 0.035712845623493195,
+    "max_diff": 0.101104736328125,
+    "mean_diff": 0.009742848575115204,
+    "rel_diff": 0.2754456145882193
+  },
+  {
+    "name": "transformer_blocks.23.attn.norm_added_q.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.984375,
+    "quant_mean": 0.984375,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.attn.norm_added_k.weight",
+    "shape": [
+      64
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 1.08056640625,
+    "quant_mean": 1.08056640625,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "transformer_blocks.23.ff.net.0.proj.weight",
+    "shape": [
+      6144,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.03148672357201576,
+    "quant_mean": 0.03138044849038124,
+    "max_diff": 0.10894775390625,
+    "mean_diff": 0.008386687375605106,
+    "rel_diff": 0.2663562213089922
+  },
+  {
+    "name": "transformer_blocks.23.ff.net.2.weight",
+    "shape": [
+      1536,
+      6144
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.023211322724819183,
+    "quant_mean": 0.022888541221618652,
+    "max_diff": 0.0972900390625,
+    "mean_diff": 0.006161514203995466,
+    "rel_diff": 0.2654528405173023
+  },
+  {
+    "name": "norm_out.linear.weight",
+    "shape": [
+      3072,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.00749243563041091,
+    "quant_mean": 0.00749243563041091,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  },
+  {
+    "name": "proj_out.weight",
+    "shape": [
+      64,
+      1536
+    ],
+    "has_nan": false,
+    "has_inf": false,
+    "is_zero": false,
+    "fp16_mean": 0.010260856710374355,
+    "quant_mean": 0.010260856710374355,
+    "max_diff": 0.0,
+    "mean_diff": 0.0,
+    "rel_diff": 0.0
+  }
+]

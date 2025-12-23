@@ -1,0 +1,22 @@
+{
+  "fp16": {
+    "num_images": 50,
+    "mean_inference_time": 6.932344765625,
+    "std_inference_time": 0.7789725638368287,
+    "peak_vram_gb": 19.465402603149414,
+    "mean_clip_score": 0.3625213617086411,
+    "std_clip_score": 0.030220701761628277,
+    "model_name": "FP16 Baseline",
+    "model_size_gb": 4.600107550621033
+  },
+  "qronos": {
+    "num_images": 50,
+    "mean_inference_time": 7.1266600390625,
+    "std_inference_time": 2.148358991101124,
+    "peak_vram_gb": 19.464426040649414,
+    "mean_clip_score": 0.18442225575447083,
+    "std_clip_score": 0.01588267582784167,
+    "model_name": "Qronos W4A8",
+    "model_size_gb": 4.600107550621033
+  }
+}

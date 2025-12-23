@@ -1,0 +1,43 @@
+{
+  "fp16": 80.65205764770508,
+  "attn_q": {
+    "quality": 71.84058252970378,
+    "n_quantized": 61,
+    "is_black": false
+  },
+  "attn_k": {
+    "quality": 84.49352518717448,
+    "n_quantized": 61,
+    "is_black": false
+  },
+  "attn_v": {
+    "quality": 87.70400110880534,
+    "n_quantized": 61,
+    "is_black": false
+  },
+  "attn_out": {
+    "quality": 79.8418451944987,
+    "n_quantized": 60,
+    "is_black": false
+  },
+  "ffn_up": {
+    "quality": 85.39190038045247,
+    "n_quantized": 47,
+    "is_black": false
+  },
+  "ffn_down": {
+    "quality": 82.91534169514973,
+    "n_quantized": 47,
+    "is_black": false
+  },
+  "norm": {
+    "quality": 107.71815490722656,
+    "n_quantized": 48,
+    "is_black": false
+  },
+  "embed": {
+    "quality": 55.32841237386068,
+    "n_quantized": 5,
+    "is_black": false
+  }
+}

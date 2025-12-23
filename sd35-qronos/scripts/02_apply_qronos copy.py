@@ -90,31 +90,7 @@ def apply_qronos_to_transformer(
     Returns:
         Quantized transformer
     """
-    # CRITICAL: Skip sensitive layers that cause black images when quantized
-    # Key (to_k) and Value (to_v) projections are extremely sensitive in diffusion models
-    # Also skip embeddings, norms, and output projections
-    skip_layers = skip_layers or [
-        # Embedding layers - critical for conditioning
-        'time_embed', 
-        'label_embed', 
-        'pos_embed',
-        'context_embedder',
-        'time_text_embed',
-        
-        # Final output - critical for image reconstruction
-        'proj_out',
-        
-        # Attention Key and Value projections - VERY sensitive
-        'to_k',      # Key projection
-        'to_v',      # Value projection  
-        'add_k_proj', # Additional key projection (for cross-attention)
-        'add_v_proj', # Additional value projection (for cross-attention)
-        
-        # Norm layers (if any linear norms exist)
-        'norm',
-    ]
-    
-    logger.info(f"Skipping layers matching: {skip_layers}")
+    skip_layers = skip_layers or ['time_embed', 'label_embed', 'proj_out', 'pos_embed']
     
     device = next(transformer.parameters()).device
     

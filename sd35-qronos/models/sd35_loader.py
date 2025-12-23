@@ -54,8 +54,11 @@ def load_sd35_pipeline(
     else:
         pipe = pipe.to(device)
     
-    # Enable memory optimizations
-    pipe.enable_vae_slicing()
+    # Enable memory optimizations (if available)
+    if hasattr(pipe, 'enable_vae_slicing'):
+        pipe.enable_vae_slicing()
+    if hasattr(pipe, 'vae') and hasattr(pipe.vae, 'enable_slicing'):
+        pipe.vae.enable_slicing()
     
     print(f"Pipeline loaded successfully")
     print(f"  Transformer: {get_model_size(pipe.transformer):.2f} GB")
@@ -185,7 +188,15 @@ def save_quantized_transformer(
     # Save config
     if save_config:
         config_path = output_dir / "config.json"
-        transformer.config.to_json_file(config_path)
+        # Handle different config types
+        if hasattr(transformer.config, 'to_json_file'):
+            transformer.config.to_json_file(config_path)
+        else:
+            # FrozenDict or dict-like config
+            import json
+            config_dict = dict(transformer.config) if hasattr(transformer.config, 'items') else {}
+            with open(config_path, 'w') as f:
+                json.dump(config_dict, f, indent=2)
         print(f"Saved config to {config_path}")
     
     # Save quantization config

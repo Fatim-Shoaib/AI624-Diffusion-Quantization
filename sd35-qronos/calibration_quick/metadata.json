@@ -1,0 +1,64 @@
+{
+  "layers": {
+    "time_text_embed.timestep_embedder.linear_1": {
+      "H_file": "time_text_embed_timestep_embedder_linear_1_H.pt",
+      "G_file": "time_text_embed_timestep_embedder_linear_1_G.pt",
+      "in_features": 256,
+      "nsamples": 120
+    },
+    "time_text_embed.timestep_embedder.linear_2": {
+      "H_file": "time_text_embed_timestep_embedder_linear_2_H.pt",
+      "G_file": "time_text_embed_timestep_embedder_linear_2_G.pt",
+      "in_features": 1536,
+      "nsamples": 120
+    },
+    "time_text_embed.text_embedder.linear_1": {
+      "H_file": "time_text_embed_text_embedder_linear_1_H.pt",
+      "G_file": "time_text_embed_text_embedder_linear_1_G.pt",
+      "in_features": 2048,
+      "nsamples": 60
+    },
+    "time_text_embed.text_embedder.linear_2": {
+      "H_file": "time_text_embed_text_embedder_linear_2_H.pt",
+      "G_file": "time_text_embed_text_embedder_linear_2_G.pt",
+      "in_features": 1536,
+      "nsamples": 60
+    },
+    "context_embedder": {
+      "H_file": "context_embedder_H.pt",
+      "G_file": "context_embedder_G.pt",
+      "in_features": 4096,
+      "nsamples": 19980
+    },
+    "transformer_blocks.0.norm1.linear": {
+      "H_file": "transformer_blocks_0_norm1_linear_H.pt",
+      "G_file": "transformer_blocks_0_norm1_linear_G.pt",
+      "in_features": 1536,
+      "nsamples": 120
+    },
+    "transformer_blocks.0.norm1_context.linear": {
+      "H_file": "transformer_blocks_0_norm1_context_linear_H.pt",
+      "G_file": "transformer_blocks_0_norm1_context_linear_G.pt",
+      "in_features": 1536,
+      "nsamples": 120
+    },
+    "transformer_blocks.0.attn.to_q": {
+      "H_file": "transformer_blocks_0_attn_to_q_H.pt",
+      "G_file": "transformer_blocks_0_attn_to_q_G.pt",
+      "in_features": 1536,
+      "nsamples": 122880
+    },
+    "transformer_blocks.0.attn.to_k": {
+      "H_file": "transformer_blocks_0_attn_to_k_H.pt",
+      "G_file": "transformer_blocks_0_attn_to_k_G.pt",
+      "in_features": 1536,
+      "nsamples": 122880
+    },
+    "transformer_blocks.0.attn.to_v": {
+      "H_file": "transformer_blocks_0_attn_to_v_H.pt",
+      "G_file": "transformer_blocks_0_attn_to_v_G.pt",
+      "in_features": 1536,
+      "nsamples": 122880
+    }
+  }
+}
