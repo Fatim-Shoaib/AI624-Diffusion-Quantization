@@ -1,0 +1,17 @@
+The task is to quantize a diffusion model.
+
+Here is a more detailed breakdown.
+
+The first paper was GPTQ. This is a quantization scheme for LLMs. Someone adapted this for diffusion models, named it Q-DiT. 
+A paper built on top of GPTQ. It is called Qronos. It is for LLMs. Your task is to implement it on diffusion models.
+The diffusion model that we will be working on is Pixart diffusers 512. 
+I will upload a lot of data sources, including GPTQ code, its paper, Q-DiT code, Qronos code and its paper. You will look at GPTQ and Q-DiT to see how they adapted the GPTQ to work with diffusion model. Then, you will look at Qronos and then adapt the Qronos method for our diffusion model in a similar way. 
+
+I will be using an RTX 4090 and 64GB RAM. 
+Make sure you implement checkpoints!
+Use float 64 for calculations to avoid overflow errors
+DO NOT quantize the key and value matrices
+
+---
+
+I am going to share the code files and papers as mentioned above in the next prompt!
